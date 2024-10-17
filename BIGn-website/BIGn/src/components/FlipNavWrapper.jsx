@@ -28,7 +28,7 @@ const FlipNav = () => {
 const Logo = () => {
   return (
     <img
-      src="../public/images/BIGn logo.png"
+      src="./images/BIGn logo.png"
       alt="Big n logo"
       style={{ height: "35px" }}
     />
