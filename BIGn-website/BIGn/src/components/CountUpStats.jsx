@@ -3,7 +3,7 @@ import { animate, useInView } from "framer-motion";
 
 const CountUpStats = () => {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-20 md:py-24">
+    <div className="mx-auto max-w-3xl px-4 pb-10 pt-20 md:py-24">
       <h2 className="mb-8 text-center text-base text-indigo-900 sm:text-lg md:mb-16">
         BUILD TRUST WITH YOUR USERS WITH A
         <span className="text-indigo-500"> BEAUTIFUL LANDING PAGE</span>
@@ -17,14 +17,14 @@ const CountUpStats = () => {
         />
         <div className="h-[1px] w-12 bg-indigo-200 sm:h-12 sm:w-[1px]" />
         <Stat
-          num={2.3}
+          num={8}
           decimals={1}
           suffix="K+"
           subheading="مستفيد"
         />
         <div className="h-[1px] w-12 bg-indigo-200 sm:h-12 sm:w-[1px]" />
         <Stat
-          num={1}
+          num={3.4}
           suffix="K+"
           subheading="خريج"
         />

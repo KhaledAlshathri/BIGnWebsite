@@ -53,7 +53,7 @@ const Content = () => {
           delay: 0.25,
           ease: "easeInOut",
         }}
-        className="Interface-text mb-3 text-center text-3xl font-bold leading-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight lg:text-7xl lg:leading-tight"
+        className="purple_color mb-3 text-center text-3xl font-bold leading-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight lg:text-7xl lg:leading-tight"
       >
         BIG n is the best
       </motion.h1>
