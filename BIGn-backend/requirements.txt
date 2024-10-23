@@ -1,0 +1,22 @@
+# api
+uvicorn~=0.31.1
+fastapi~=0.115.2
+
+# api libraries
+python-multipart~=0.0.12
+email-validator~=2.2.0
+
+# pydantic
+pydantic~=2.9.2
+pydantic-settings~=2.5.2
+pydantic_core~=2.23.4
+
+# tools
+bcrypt~=4.2.0
+pyjwt~=2.9.0
+
+# database
+sqlalchemy~=2.0.35
+alembic~=1.13.3
+psycopg~=3.2.3
+psycopg-binary~=3.2.3
