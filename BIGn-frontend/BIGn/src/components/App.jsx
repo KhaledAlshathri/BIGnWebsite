@@ -1,18 +1,17 @@
-import { useState } from 'react'
 import FlipNavWrapper from './FlipNavWrapper'
 import GridHero from './GridHero'
 import CountUpStats from './CountUpStats'
 import AboutUs from './AboutUs'
+import OutlineCards from './OutlineCards'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <FlipNavWrapper/>
-      <GridHero/>
-      <CountUpStats/>
-      <AboutUs/>
+      <FlipNavWrapper />
+      <GridHero />
+      <CountUpStats />
+      <AboutUs />
+      <OutlineCards />
     </>
   )
 }
