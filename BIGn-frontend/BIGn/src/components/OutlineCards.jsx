@@ -43,17 +43,17 @@ const OutlineCards = () => {
         <Card
           title="Discover"
           href="#"
-          bgUrl="https://images.unsplash.com/photo-1507208773393-40d9fc670acf?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          bgUrl="https://images.unsplash.com/photo-1507208773393-40d9fc670acf?q=80&w=2787&auto=format&fit=crop"
         />
         <Card
           title="Learn"
           href="#"
-          bgUrl="https://images.unsplash.com/photo-1535957998253-26ae1ef29506?q=80&w=2836&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          bgUrl="https://images.unsplash.com/photo-1535957998253-26ae1ef29506?q=80&w=2836&auto=format&fit=crop"
         />
         <Card
           title="Grow"
           href="#"
-          bgUrl="https://images.unsplash.com/photo-1521649415036-659258dc424f?q=80&w=2548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          bgUrl="https://images.unsplash.com/photo-1521649415036-659258dc424f?q=80&w=2548&auto=format&fit=crop"
         />
       </div>
       <Cursor cursorRef={cursorRef} />
@@ -68,10 +68,12 @@ const Card = ({ bgUrl, title, href }) => {
       style={{
         backgroundImage: `url(${bgUrl})`,
         backgroundPosition: "center",
+        backgroundSize: "cover",
       }}
-      className="outline-card flex aspect-square w-full flex-col justify-end overflow-hidden rounded-lg bg-neutral-400 bg-[size:100%] shadow-xl shadow-neutral-900/30 transition-[background-size] duration-500 hover:bg-[size:110%]"
+      className="outline-card flex w-[300px] h-[300px] flex-col justify-end overflow-hidden rounded-lg bg-neutral-400 bg-cover shadow-xl transition-transform duration-500 hover:scale-105
+      sm:w-full sm:h-auto sm:aspect-square"
     >
-      <div className="pointer-events-none flex items-center justify-between bg-gradient-to-t from-black to-black/0 p-6 pt-8 text-xl font-medium text-white md:text-2xl">
+      <div className="pointer-events-none flex items-center justify-between bg-gradient-to-t from-black to-transparent p-4 pt-8 text-lg font-medium text-white sm:p-6 sm:text-xl">
         <h3>{title}</h3>
         <FiArrowRight />
       </div>

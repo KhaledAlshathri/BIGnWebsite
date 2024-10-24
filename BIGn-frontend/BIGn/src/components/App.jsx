@@ -3,6 +3,7 @@ import GridHero from './GridHero'
 import CountUpStats from './CountUpStats'
 import AboutUs from './AboutUs'
 import OutlineCards from './OutlineCards'
+import Partners from './Partners'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <CountUpStats />
       <AboutUs />
       <OutlineCards />
+      <Partners />
     </>
   )
 }

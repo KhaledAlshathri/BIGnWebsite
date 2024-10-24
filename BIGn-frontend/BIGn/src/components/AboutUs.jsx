@@ -5,7 +5,7 @@ import { MotionConfig, motion } from "framer-motion";
 const AboutUs = () => {
   return (
     <section className="bg-white px-10 py-12 md:px-8 md:py-24">
-      <div className="mx-auto w-full max-w-5xl">
+      <div className="mx-auto w-full max-w-5xl flex justify-center">
         <Card
           title="من نحن"
           subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem doloremque vitae minima."
@@ -21,7 +21,7 @@ const Card = ({ title, subtitle, className }) => {
       <motion.div
         whileHover="hovered"
         className={twMerge(
-          "group w-full border-2 border-black bg-[#1AC3D0]",
+          "group w-[300px] h-[300px] sm:w-full sm:h-[200px] border-2 border-black bg-[#1AC3D0]",
           className
         )}
       >
@@ -29,7 +29,7 @@ const Card = ({ title, subtitle, className }) => {
           initial={{ x: 0, y: 0 }}
           variants={{ hovered: { x: -8, y: -8 } }}
           className={twMerge(
-            "-m-0.5 border-2 border-black bg-[#1AC3D0]",
+            "-m-0.5 border-2 w-[300px] h-[300px] sm:w-full sm:h-[200px] border-black bg-[#1AC3D0] h-full",
             className
           )}
         >
@@ -37,11 +37,11 @@ const Card = ({ title, subtitle, className }) => {
             initial={{ x: 0, y: 0 }}
             variants={{ hovered: { x: -8, y: -8 } }}
             className={twMerge(
-              "relative -m-0.5 flex flex-col justify-between overflow-hidden border-2 border-black bg-[#1AC3D0] p-4 sm:p-8",
+              "relative -m-0.5  w-[300px] h-[300px] sm:w-full sm:h-[200px] flex flex-col justify-between overflow-hidden border-2 border-black bg-[#1AC3D0] p-4 sm:p-8 h-full",
               className
             )}
           >
-            <p className="flex items-center text-xl pr-sm-0 pr-3 sm:text-2xl font-medium uppercase text-white">
+            <p className="flex items-center text-xl pr-3 sm:pr-0 sm:text-2xl font-medium uppercase text-white">
               <span className="-ml-8 mr-2 text-white opacity-0 transition-all duration-300 ease-in-out group-hover:ml-0 group-hover:opacity-100">
                 •
               </span>
@@ -57,7 +57,6 @@ const Card = ({ title, subtitle, className }) => {
               transition={{
                 duration: 25,
                 repeat: Infinity,
-                repeatType: "loop",
                 ease: "linear",
               }}
               style={{ top: "0", right: "0", x: "50%", y: "-50%", scale: 0.75 }}
