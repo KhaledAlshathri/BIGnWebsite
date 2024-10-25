@@ -1,88 +1,185 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
-import { MotionConfig, motion } from "framer-motion";
+import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { SiTiktok } from "react-icons/si";
 
 const AboutUs = () => {
   return (
-    <section className="bg-white px-10 py-12 md:px-8 md:py-24">
-      <div className="mx-auto w-full max-w-5xl flex justify-center">
-        <Card
-          title="من نحن"
-          subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem doloremque vitae minima."
-        />
-      </div>
-    </section>
+    <div className="px-4 py-12 text-zinc-50">
+      <Logo />
+      <motion.div
+        initial="initial"
+        animate="animate"
+        transition={{
+          staggerChildren: 0.05,
+        }}
+        className="mx-auto grid max-w-4xl grid-flow-dense grid-cols-12 gap-4"
+      >
+        <HeaderBlock />
+        <SocialsBlock />
+        <AboutBlock />
+      </motion.div>
+    </div>
   );
 };
 
-const Card = ({ title, subtitle, className }) => {
+const Block = ({ className, ...rest }) => {
   return (
-    <MotionConfig transition={{ type: "spring", bounce: 0.5 }}>
-      <motion.div
-        whileHover="hovered"
-        className={twMerge(
-          "group w-[300px] h-[300px] sm:w-full sm:h-[200px] border-2 border-black bg-[#1AC3D0]",
-          className
-        )}
-      >
-        <motion.div
-          initial={{ x: 0, y: 0 }}
-          variants={{ hovered: { x: -8, y: -8 } }}
-          className={twMerge(
-            "-m-0.5 border-2 w-[300px] h-[300px] sm:w-full sm:h-[200px] border-black bg-[#1AC3D0] h-full",
-            className
-          )}
-        >
-          <motion.div
-            initial={{ x: 0, y: 0 }}
-            variants={{ hovered: { x: -8, y: -8 } }}
-            className={twMerge(
-              "relative -m-0.5  w-[300px] h-[300px] sm:w-full sm:h-[200px] flex flex-col justify-between overflow-hidden border-2 border-black bg-[#1AC3D0] p-4 sm:p-8 h-full",
-              className
-            )}
-          >
-            <p className="flex items-center text-xl pr-3 sm:pr-0 sm:text-2xl font-medium uppercase text-white">
-              <span className="-ml-8 mr-2 text-white opacity-0 transition-all duration-300 ease-in-out group-hover:ml-0 group-hover:opacity-100">
-                •
-              </span>
-              {title}
-            </p>
-            <div className="flex flex-1 items-center">
-              <p className="text-base sm:text-lg text-white">{subtitle}</p>
-            </div>
+    <motion.div
+      variants={{
+        initial: {
+          scale: 0.5,
+          y: 50,
+          opacity: 0,
+        },
+        animate: {
+          scale: 1,
+          y: 0,
+          opacity: 1,
+        },
+      }}
+      transition={{
+        type: "spring",
+        mass: 3,
+        stiffness: 400,
+        damping: 50,
+      }}
+      className={twMerge(
+        "col-span-4 rounded-lg border border-zinc-700 bg-zinc-800 p-6",
+        className
+      )}
+      {...rest}
+    />
+  );
+};
 
-            <motion.svg
-              initial={{ rotate: 0 }}
-              animate={{ rotate: 360 }}
-              transition={{
-                duration: 25,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-              style={{ top: "0", right: "0", x: "50%", y: "-50%", scale: 0.75 }}
-              width="200"
-              height="200"
-              className="pointer-events-none absolute z-10 rounded-full"
-            >
-              <path
-                id="circlePath"
-                d="M100,100 m-100,0 a100,100 0 1,0 200,0 a100,100 0 1,0 -200,0"
-                fill="none"
-              />
-              <text>
-                <textPath
-                  href="#circlePath"
-                  fill="white"
-                  className="fill-white text-base sm:text-2xl font-black uppercase opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
-                >
-                  LEARN MORE • LEARN MORE • LEARN MORE • LEARN MORE •
-                </textPath>
-              </text>
-            </motion.svg>
-          </motion.div>
-        </motion.div>
-      </motion.div>
-    </MotionConfig>
+const HeaderBlock = () => (
+  <Block className="col-span-12 row-span-2 md:col-span-6">
+    <div className="flex items-center justify-center h-full">
+      <h2 className="text-4xl font-medium leading-tight flex items-center">
+           ماهي مبادرة
+        <span className="mr-4 ">
+          <img
+            src="./images/BIGn logo white.png"
+            alt="avatar"
+            style={{ height: '35px' }}
+          />
+        </span>
+      </h2>
+    </div>
+  </Block>
+);
+
+const SocialsBlock = () => (
+  <>
+    {/* X (Twitter) */}
+    <Block
+      whileHover={{
+        rotate: "2.5deg",
+        scale: 1.1,
+      }}
+      className="col-span-6 md:col-span-3 bg-[#1AC3D0]"
+    >
+      <a
+        href="#"
+        className="grid h-full place-content-center text-3xl text-white"
+      >
+        <XIcon />
+      </a>
+    </Block>
+    {/* TikTok */}
+    <Block
+      whileHover={{
+        rotate: "-2.5deg",
+        scale: 1.1,
+      }}
+      className="col-span-6 md:col-span-3 bg-[#FF3C10]"
+    >
+      <a
+        href="#"
+        className="grid h-full place-content-center text-3xl text-white"
+      >
+        <SiTiktok />
+      </a>
+    </Block>
+    {/* LinkedIn */}
+    <Block
+      whileHover={{
+        rotate: "-2.5deg",
+        scale: 1.1,
+      }}
+      className="col-span-6 md:col-span-3 bg-[#FFD900]"
+    >
+      <a
+        href="#"
+        className="grid h-full place-content-center text-3xl text-white"
+      >
+        <FaLinkedinIn />
+      </a>
+    </Block>
+    {/* Instagram */}
+    <Block
+      whileHover={{
+        rotate: "2.5deg",
+        scale: 1.1,
+      }}
+      className="col-span-6 md:col-span-3 bg-[#5A5DD9]"
+    >
+      <a
+        href="#"
+        className="grid h-full place-content-center text-3xl text-white"
+      >
+        <FaInstagram />
+      </a>
+    </Block>
+  </>
+);
+
+const XIcon = () => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 72 72"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M61.3625 6.52832H49.8187L36.1888 29.6389L22.5589 6.52832H10.9258L30.9184 36.2094L9.96777 68.6111H21.5115L36.1888 44.7698L50.8662 68.6111H62.5L41.5494 36.2094L61.3625 6.52832Z" />
+  </svg>
+);
+
+const AboutBlock = () => (
+  <Block className="col-span-12 text-3xl leading-snug">
+    <p>
+      My passion is building cool stuff.{" "}
+      <span className="text-zinc-400">
+        I build primarily with React, Tailwind CSS, and Framer Motion. I love
+        this stack so much that I even built a website about it. I've made over
+        a hundred videos on the subject across YouTube and TikTok.
+      </span>
+    </p>
+  </Block>
+);
+
+const Logo = () => {
+  return (
+    <svg
+      width="40"
+      height="auto"
+      viewBox="0 0 50 39"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="mx-auto mb-12 fill-zinc-50"
+    >
+      <path
+        d="M16.4992 2H37.5808L22.0816 24.9729H1L16.4992 2Z"
+        stopColor="#000000"
+      ></path>
+      <path
+        d="M17.4224 27.102L11.4192 36H33.5008L49 13.0271H32.7024L23.2064 27.102H17.4224Z"
+        stopColor="#000000"
+      ></path>
+    </svg>
   );
 };
 

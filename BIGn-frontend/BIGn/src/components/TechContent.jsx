@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const TechContent = () => {
   return (
-    <section className="px-4 py-12">
+    <section className="px-4 py-12 pb-20 ">
       <div className="w-full px-8 py-12 md:py-20 flex flex-col items-center">
         <h3 className="text-center text-5xl md:text-5xl max-w-xl font-semibold">
           النشرات التقنية

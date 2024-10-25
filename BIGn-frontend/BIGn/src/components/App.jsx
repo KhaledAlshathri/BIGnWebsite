@@ -5,6 +5,7 @@ import AboutUs from './AboutUs'
 import OutlineCards from './OutlineCards'
 import Partners from './Partners'
 import TechContent from './TechContent'
+import Footer from './Footer'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <OutlineCards />
       <Partners />
       <TechContent />
+      <Footer />
     </>
   )
 }
