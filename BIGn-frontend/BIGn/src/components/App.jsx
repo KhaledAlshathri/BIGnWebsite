@@ -4,6 +4,7 @@ import CountUpStats from './CountUpStats'
 import AboutUs from './AboutUs'
 import OutlineCards from './OutlineCards'
 import Partners from './Partners'
+import TechContent from './TechContent'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <AboutUs />
       <OutlineCards />
       <Partners />
+      <TechContent />
     </>
   )
 }

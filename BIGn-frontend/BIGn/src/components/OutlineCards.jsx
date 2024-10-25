@@ -39,19 +39,24 @@ const OutlineCards = () => {
       onMouseMove={handleMouseMove}
       className="overflow-hidden px-8 py-24"
     >
+      <div className="w-full px-8 py-12 md:py-20 flex flex-col items-center">
+        <h3 className="text-center text-5xl md:text-5xl max-w-xl font-semibold">
+          أنشطتنا
+        </h3>
+      </div>
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-8 sm:flex-row">
         <Card
-          title="Discover"
+          title="برنامج مُلم"
           href="#"
           bgUrl="https://images.unsplash.com/photo-1507208773393-40d9fc670acf?q=80&w=2787&auto=format&fit=crop"
         />
         <Card
-          title="Learn"
+          title="الملتقى التقني"
           href="#"
           bgUrl="https://images.unsplash.com/photo-1535957998253-26ae1ef29506?q=80&w=2836&auto=format&fit=crop"
         />
         <Card
-          title="Grow"
+          title="مسابقات الBIG O"
           href="#"
           bgUrl="https://images.unsplash.com/photo-1521649415036-659258dc424f?q=80&w=2548&auto=format&fit=crop"
         />
