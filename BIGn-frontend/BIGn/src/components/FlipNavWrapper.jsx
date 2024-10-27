@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { FiMenu, FiArrowRight } from 'react-icons/fi'
+import { FiMenu } from 'react-icons/fi' // Removed FiArrowRight
+import { Link } from 'react-router-dom';
 
 const FlipNavWrapper = () => {
   return (
@@ -39,11 +40,12 @@ const NavLeft = ({ setIsOpen }) => {
     <div className="flex w-full items-center">
       <Logo />
       <div className="flex-grow" />
-      <div className="flex items-center gap-6">
-        <NavLink text="الرئيسية" />
-        <NavLink text="فعالياتنا" />
-        <NavLink text="المنشورات التقنية" />
-        <NavLink text="الهيكلة" />
+      <div className="flex items-center gap-8">
+       <MenuLink text="الهيكلة" href="/members"/>
+       <MenuLink text="المنشورات التقنية" href="/content"/>
+       <MenuLink text="الأنشطة" href="/activities"/>
+       <MenuLink text="من نحن" href="/about" />
+       <MenuLink text="الرئيسية" href="/" />
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -89,25 +91,23 @@ const NavMenu = ({ isOpen }) => {
       animate={isOpen ? 'open' : 'closed'}
       className="absolute left-0 right-0 top-full origin-top flex flex-col gap-4 bg-white p-4 shadow-lg"
     >
-      <MenuLink text="الرئيسية" />
-      <MenuLink text="فعالياتنا" />
-      <MenuLink text="المنشورات التقنية" />
-      <MenuLink text="الهيكلة" />
+      <MenuLink text="الهيكلة" href="/members"/>
+      <MenuLink text="المنشورات التقنية" href="/content"/>
+      <MenuLink text="الأنشطة" href="/activities"/>
+      <MenuLink text="من نحن" href="/about" />
+      <MenuLink text="الرئيسية" href="/" />
     </motion.div>
   )
 }
 
-const MenuLink = ({ text }) => {
+const MenuLink = ({ text, href }) => {
   return (
     <motion.a
       variants={menuLinkVariants}
       rel="nofollow"
-      href="#"
+      href={href}
       className="flex h-[30px] items-start gap-2 overflow-hidden font-medium text-lg"
     >
-      <motion.span variants={menuLinkArrowVariants}>
-        <FiArrowRight className="h-[30px] text-gray-950" aria-hidden="true" />
-      </motion.span>
       <motion.div whileHover={{ y: -30 }}>
         <span className="flex h-[30px] items-center text-gray-500">
           {text}
@@ -147,14 +147,5 @@ const menuLinkVariants = {
   closed: {
     y: -10,
     opacity: 0,
-  },
-}
-
-const menuLinkArrowVariants = {
-  open: {
-    x: 0,
-  },
-  closed: {
-    x: -4,
   },
 }

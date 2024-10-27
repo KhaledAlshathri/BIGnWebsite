@@ -1,10 +1,28 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './components/App.jsx'
+import App from './Pages/App.jsx'
+import About from './Pages/About.jsx';
+import Content from './Pages/Content.jsx';
+import Activities from './Pages/Activities.jsx';
+import Members from './Pages/Members.jsx';
+import FlipNavWrapper from './components/FlipNavWrapper'
+import Footer from './components/Footer'
 import './index.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+
+const router = createBrowserRouter([
+  {path: "/", element: <App />},
+  {path: "/About", element: <About />},
+  {path: "/Activities", element: <Activities />},
+  {path: "/Content", element: <Content />},
+  {path: "/Members", element: <Members />},
+])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <FlipNavWrapper />
+    <RouterProvider router={router} />
+    <Footer />
   </StrictMode>,
 )
