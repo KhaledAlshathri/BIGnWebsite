@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { FiMenu } from 'react-icons/fi' // Removed FiArrowRight
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 const FlipNavWrapper = () => {
   return (
@@ -40,30 +40,32 @@ const NavLeft = ({ setIsOpen }) => {
     <div className="flex w-full items-center">
       <Logo />
       <div className="flex-grow" />
-      <div className="flex items-center gap-8">
-       <MenuLink text="الهيكلة" href="/members"/>
-       <MenuLink text="المنشورات التقنية" href="/content"/>
-       <MenuLink text="الأنشطة" href="/activities"/>
-       <MenuLink text="من نحن" href="/about" />
-       <MenuLink text="الرئيسية" href="/" />
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="block text-2xl text-gray-950 lg:hidden"
-          onClick={() => setIsOpen((prev) => !prev)}
-          aria-label="Toggle Menu"
-        >
-          <FiMenu />
-        </motion.button>
+      {/* Navigation links, hidden on small screens */}
+      <div className="hidden lg:flex items-center gap-8">
+        <MenuLink text="الهيكلة" href="/members" />
+        <MenuLink text="المنشورات التقنية" href="/content" />
+        <MenuLink text="الأنشطة" href="/activities" />
+        <MenuLink text="من نحن" href="/about" />
+        <MenuLink text="الرئيسية" href="/" />
       </div>
+      {/* Hamburger menu button, visible on small screens */}
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="block text-2xl text-gray-950 lg:hidden"
+        onClick={() => setIsOpen((prev) => !prev)}
+        aria-label="Toggle Menu"
+      >
+        <FiMenu />
+      </motion.button>
     </div>
   )
 }
 
-const NavLink = ({ text }) => {
+const NavLink = ({ text, href }) => {
   return (
     <a
-      href="#"
+      href={href}
       rel="nofollow"
       className="hidden h-[30px] overflow-hidden font-medium lg:block"
     >
@@ -91,9 +93,9 @@ const NavMenu = ({ isOpen }) => {
       animate={isOpen ? 'open' : 'closed'}
       className="absolute left-0 right-0 top-full origin-top flex flex-col gap-4 bg-white p-4 shadow-lg"
     >
-      <MenuLink text="الهيكلة" href="/members"/>
-      <MenuLink text="المنشورات التقنية" href="/content"/>
-      <MenuLink text="الأنشطة" href="/activities"/>
+      <MenuLink text="الهيكلة" href="/members" />
+      <MenuLink text="المنشورات التقنية" href="/content" />
+      <MenuLink text="الأنشطة" href="/activities" />
       <MenuLink text="من نحن" href="/about" />
       <MenuLink text="الرئيسية" href="/" />
     </motion.div>

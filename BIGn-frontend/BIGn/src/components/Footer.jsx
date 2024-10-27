@@ -23,18 +23,21 @@ const Footer = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="flex flex-col md:flex-row md:space-x-6 md:space-x-reverse text-center md:text-right mb-4 md:mb-0">
+        <div className="flex flex-row space-x-6 space-x-reverse text-center text-right mb-4 text-sm md:mb-0">
+          <a href="/" className="hover:text-gray-400 md:mr-6">
+          الرئيسية
+          </a>
           <a href="/about" className="hover:text-gray-400 md:mr-6">
-            من نحن
+          من نحن
           </a>
-          <a href="/services" className="hover:text-gray-400 md:mr-6">
-            خدماتنا
+          <a href="/activities" className="hover:text-gray-400 md:mr-6">
+          الأنشطة
           </a>
-          <a href="/contact" className="hover:text-gray-400 md:mr-6">
-            اتصل بنا
+          <a href="/content" className="hover:text-gray-400">
+          المنشورات التقنية
           </a>
-          <a href="/privacy" className="hover:text-gray-400">
-            سياسة الخصوصية
+          <a href="/members" className="hover:text-gray-400 md:mr-6">
+          الهيكلة
           </a>
         </div>
 
