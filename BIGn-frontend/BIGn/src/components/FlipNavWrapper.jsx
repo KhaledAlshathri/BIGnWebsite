@@ -1,11 +1,10 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { FiMenu } from 'react-icons/fi' // Removed FiArrowRight
-import { Link } from 'react-router-dom'
 
 const FlipNavWrapper = () => {
   return (
-    <div className="bg-gray-50">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-gray-50">
       <FlipNav />
     </div>
   )

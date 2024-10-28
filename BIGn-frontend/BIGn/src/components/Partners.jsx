@@ -147,7 +147,7 @@ const Card = ({
         ease: "easeOut",
       }}
       onClick={() => setSelected(position)}
-      className="absolute top-0 h-full p-8 lg:p-12 cursor-pointer flex flex-col justify-between shadow-lg"
+      className="absolute top-0 h-full p-8 lg:p-12 cursor-pointer rounded-t-md flex flex-col justify-between shadow-lg"
     >
       <Icon className="text-7xl mx-auto" />
       <p className="text-lg lg:text-xl font-light italic my-8">

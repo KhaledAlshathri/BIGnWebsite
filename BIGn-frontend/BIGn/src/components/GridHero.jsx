@@ -21,7 +21,7 @@ const GridHero = () => {
 
 const Content = () => {
   return (
-    <div className="relative z-20 mx-auto flex max-w-6xl flex-col items-center justify-center px-4 py-24 md:px-8 md:py-36">
+    <div className="relative z-20 mx-auto flex max-w-6xl flex-col items-center justify-center px-4 py-44 md:px-8 md:py-36 md:pt-52">
       <motion.div
         initial={{
           y: 25,
