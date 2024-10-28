@@ -1,7 +1,7 @@
 import GridHero from '../components/GridHero'
 import CountUpStats from '../components/CountUpStats'
 import AboutUs from '../components/AboutUs'
-import OutlineCards from '../components/OutlineCards'
+import ActivitiesCards from '../components/ActivitiesCards'
 import Partners from '../components/Partners'
 import TechContent from '../components/TechContent'
 
@@ -13,7 +13,7 @@ function App() {
     <GridHero />
     <CountUpStats />
     <AboutUs />
-    <OutlineCards />
+    <ActivitiesCards />
     <Partners />
     <TechContent />
     </>

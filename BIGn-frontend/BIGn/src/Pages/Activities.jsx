@@ -1,10 +1,11 @@
 import React from 'react';
+import ActivityContent from '../components/ActivityContent';
 
 const Activities = () => {
   return (
-    <div>
-      <h1>Activities</h1>
-    </div>
+    <>
+      <ActivityContent />
+    </>
   );
 };
 

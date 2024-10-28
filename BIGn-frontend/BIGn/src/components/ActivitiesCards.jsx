@@ -1,10 +1,14 @@
 import React, { useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
 
+import melmImage from "/images/Mulem.png";
+import meltaqaImage from "/images/Tech-meeting.png";
+import bigOImage from "/images/BIG-Os.png";
+
 const CURSOR_WIDTH = 32;
 const HOVER_PADDING = 24;
 
-const OutlineCards = () => {
+const ActivitiesCards = () => {
   const cursorRef = useRef(null);
 
   const handleMouseMove = (e) => {
@@ -35,48 +39,30 @@ const OutlineCards = () => {
   };
 
   return (
-    <section
-      onMouseMove={handleMouseMove}
-      className="overflow-hidden px-8 py-24"
-    >
+    <section onMouseMove={handleMouseMove} className="overflow-hidden px-8 py-24">
       <div className="w-full px-8 py-12 md:py-20 flex flex-col items-center">
-        <h3 className="text-center text-5xl md:text-5xl max-w-xl font-semibold">
-          أنشطتنا
-        </h3>
+        <h3 className="text-center text-5xl md:text-5xl max-w-xl font-semibold">أنشطتنا</h3>
       </div>
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-8 sm:flex-row">
-        <Card
-          title="برنامج مُلم"
-          href="#"
-          bgUrl="https://images.unsplash.com/photo-1507208773393-40d9fc670acf?q=80&w=2787&auto=format&fit=crop"
-        />
-        <Card
-          title="الملتقى التقني"
-          href="#"
-          bgUrl="https://images.unsplash.com/photo-1535957998253-26ae1ef29506?q=80&w=2836&auto=format&fit=crop"
-        />
-        <Card
-          title="مسابقات الBIG O"
-          href="#"
-          bgUrl="https://images.unsplash.com/photo-1521649415036-659258dc424f?q=80&w=2548&auto=format&fit=crop"
-        />
+        <Card title="برنامج مُلم" href="/activities" bg={melmImage} />
+        <Card title="الملتقى التقني" href="/activities" bg={meltaqaImage} />
+        <Card title="مسابقات الBIG O" href="/activities" bg={bigOImage} />
       </div>
       <Cursor cursorRef={cursorRef} />
     </section>
   );
 };
 
-const Card = ({ bgUrl, title, href }) => {
+const Card = ({ bg, title, href }) => {
   return (
     <a
       href={href}
       style={{
-        backgroundImage: `url(${bgUrl})`,
+        backgroundImage: `url(${bg})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
-      className="outline-card flex w-[300px] h-[300px] flex-col justify-end overflow-hidden rounded-lg bg-neutral-400 bg-cover shadow-xl transition-transform duration-500 hover:scale-105
-      sm:w-full sm:h-auto sm:aspect-square"
+      className="outline-card flex w-[300px] h-[300px] flex-col justify-end overflow-hidden rounded-lg bg-neutral-400 bg-cover shadow-xl transition-transform duration-500 hover:scale-105 sm:w-full sm:h-auto sm:aspect-square"
     >
       <div className="pointer-events-none flex items-center justify-between bg-gradient-to-t from-black to-transparent p-4 pt-8 text-lg font-medium text-white sm:p-6 sm:text-xl">
         <h3>{title}</h3>
@@ -102,4 +88,4 @@ const Cursor = ({ cursorRef }) => {
   );
 };
 
-export default OutlineCards;
+export default ActivitiesCards;
