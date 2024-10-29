@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { FiLogIn, FiAlertCircle } from "react-icons/fi";
 import { twMerge } from "tailwind-merge";
-import { FiLogIn } from "react-icons/fi";
 
 const ActivityContent = () => {
+  const [activeModal, setActiveModal] = useState(null); // Track which modal is open
+
   const cards = [
     {
+      id: 1,
       tag: "برنامج مُلم",
       text: (
         <>
@@ -24,8 +27,10 @@ const ActivityContent = () => {
       backgroundImage: "/images/dummy1.jpg",
       buttonText: "سجل الآن!",
       buttonColor: "orange-700",
+      message: "خلك قريب وتابعنا على مواقع التواصل الاجتماعي لتعرف أكثر عن برنامج مُلم!",
     },
     {
+      id: 2,
       tag: "الملتقى التقني",
       text: (
         <>
@@ -44,8 +49,10 @@ const ActivityContent = () => {
       backgroundImage: "/images/dummy2.jpg",
       buttonText: "سجل الآن!",
       buttonColor: "cyan-400",
+      message: "خلك قريب وتابعنا على مواقع التواصل الاجتماعي لتعرف عن أكثر الملتقى التقني!",
     },
     {
+      id: 3,
       tag: "مسابقات الBIG O's",
       text: (
         <>
@@ -58,14 +65,15 @@ const ActivityContent = () => {
       backgroundImage: "/images/dummy3.jpg",
       buttonText: "سجل الآن!",
       buttonColor: "violet-600",
+      message: "خلك قريب وتابعنا على مواقع التواصل الاجتماعي لتعرف أكثر عن تدريب الBIG O's!",
     },
   ];
 
   return (
     <div className="px-4 py-12 text-zinc-50">
-      {cards.map((card, index) => (
+      {cards.map((card) => (
         <motion.div
-          key={index}
+          key={card.id}
           initial="initial"
           animate="animate"
           transition={{
@@ -112,10 +120,19 @@ const ActivityContent = () => {
               <RoundedSlideButton
                 buttonText={card.buttonText}
                 buttonColor={card.buttonColor}
+                onClick={() => setActiveModal(card.id)} // Open specific modal
               />
             </div>
           </Block>
         </motion.div>
+      ))}
+      {cards.map((card) => (
+        <DontHaveActivityNow
+          key={card.id}
+          isOpen={activeModal === card.id}
+          setIsOpen={() => setActiveModal(null)}
+          message={card.message}
+        />
       ))}
     </div>
   );
@@ -194,25 +211,39 @@ const Typewrite = ({ examples }) => {
   );
 };
 
-const RoundedSlideButton = ({ buttonText , buttonColor}) => {
+const RoundedSlideButton = ({ buttonText, buttonColor, onClick }) => {
+  const colorClassMap = {
+    "orange-700": "text-orange-700 border-orange-700 before:bg-orange-700",
+    "cyan-400": "text-cyan-400 border-cyan-400 before:bg-cyan-400",
+    "violet-600": "text-violet-600 border-violet-600 before:bg-violet-600",
+  };
+
+  const colorClasses = colorClassMap[buttonColor] || "";
+  const inlineStyle = !colorClassMap[buttonColor]
+    ? { color: buttonColor, borderColor: buttonColor }
+    : {};
+
   return (
     <button
+      onClick={onClick}
       className={`
-        relative z-0 flex items-center gap-2 overflow-hidden rounded-lg border-[1px] 
-        border-${buttonColor} px-4 py-2 font-semibold
-        uppercase text-${buttonColor} transition-all duration-500
-        
+        ${colorClasses}
+        relative z-0 flex items-center gap-2 overflow-hidden rounded-lg border px-4 py-2 font-semibold
+        uppercase transition-all duration-500
+
         before:absolute before:inset-0
         before:-z-10 before:translate-x-[150%]
         before:translate-y-[150%] before:scale-[2.5]
-        before:rounded-[100%] before:bg-${buttonColor}
+        before:rounded-[100%]
         before:transition-transform before:duration-1000
         before:content-[""]
 
         hover:scale-105 hover:text-neutral-900
         hover:before:translate-x-[0%]
         hover:before:translate-y-[0%]
-        active:scale-95`}
+        active:scale-95
+      `}
+      style={inlineStyle}
     >
       <FiLogIn />
       <span>{buttonText}</span>
@@ -220,6 +251,48 @@ const RoundedSlideButton = ({ buttonText , buttonColor}) => {
   );
 };
 
-
+// Modal Component with a custom message
+const DontHaveActivityNow = ({ isOpen, setIsOpen, message }) => {
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={() => setIsOpen(null)}
+          className="bg-slate-900/20 backdrop-blur p-8 fixed inset-0 z-50 grid place-items-center overflow-y-scroll cursor-pointer"
+        >
+          <motion.div
+            initial={{ scale: 0, rotate: "12.5deg" }}
+            animate={{ scale: 1, rotate: "0deg" }}
+            exit={{ scale: 0, rotate: "0deg" }}
+            onClick={(e) => e.stopPropagation()}
+            className="bg-gradient-to-br from-violet-600 to-indigo-600 text-white p-6 rounded-lg w-full max-w-lg shadow-xl cursor-default relative overflow-hidden"
+          >
+            <FiAlertCircle className="text-white/10 rotate-12 text-[250px] absolute z-0 -top-24 -left-24" />
+            <div className="relative z-10">
+              <div className="bg-white w-16 h-16 mb-2 rounded-full text-3xl text-indigo-600 grid place-items-center mx-auto">
+                <FiAlertCircle />
+              </div>
+              <h3 className="text-3xl font-bold text-center mb-2">
+                للأسف, الفعالية مابدأت
+              </h3>
+              <p className="text-center mb-6">{message}</p>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setIsOpen(null)}
+                  className="bg-white hover:opacity-90 transition-opacity text-indigo-600 font-semibold w-full py-2 rounded"
+                >
+                  حسنًا
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};
 
 export default ActivityContent;
