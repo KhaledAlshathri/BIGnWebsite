@@ -57,10 +57,11 @@ const Block = ({ className, ...rest }) => {
 const HeaderBlock = () => (
   <Block className="col-span-12 row-span-2 md:col-span-6">
     <div className="flex items-center justify-center h-full">
-      <h2 className="text-4xl font-medium leading-tight flex items-center">
+      <h2 className="text-2xl sm:text-4xl font-medium leading-tight flex items-center">
            ماهي مبادرة
         <span className="mr-4 ">
           <img
+          className="AboutUsLogo"
             src="./images/BIGn logo white.png"
             alt="avatar"
             style={{ height: '35px' }}
@@ -149,7 +150,7 @@ const XIcon = () => (
 );
 
 const AboutBlock = () => (
-  <Block className="col-span-12 text-3xl leading-snug">
+  <Block className="col-span-12 text-xl md:text-3xl leading-snug">
     <p>
       My passion is building cool stuff.{" "}
       <span className="text-zinc-400">

@@ -11,3 +11,11 @@ body {
 .purple_color{
   color: #360E91 ;
 }
+
+
+@media (max-width: 640px) {
+  .AboutUsLogo{
+    height: 28px !important;
+  }
+}
+
