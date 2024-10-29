@@ -1,9 +1,10 @@
 import React from 'react';
+import VisionAndMessage from '../components/VisionAndMEssage';
 
 const About = () => {
   return (
     <>
-      <h1>About Us</h1>
+      <VisionAndMessage />
     </>
   );
 };
