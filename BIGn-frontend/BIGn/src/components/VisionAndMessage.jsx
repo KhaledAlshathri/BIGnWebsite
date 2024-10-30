@@ -1,60 +1,58 @@
-import { motion } from "framer-motion";
 import React from "react";
-import imageOne from "/images/Vision.png"; 
-import imageTwo from "/images/Message.png"; 
 
-const VisionAndMessage = () => {
-  return (
-    <div className="mx-auto grid max-w-4xl py-24 grid md:grid-cols-2 gap-x-28 gap-y-14 ">
-      <ShimmerBorderCard
-        imgSrc={imageOne}
-        title="الرؤية"
-        text="لهعسع ستارس اسلااتلاص هعسيلا سلا اسلاللاسىى تسلاي تتسل"
-        borderColor="orange"
-      />
-      <ShimmerBorderCard
-        imgSrc={imageTwo}
-        title="الرسالة"
-        text="لهعسع ستارس اسلااتلاص هعسيلا سلا اسلاللاسىى تسلاي تتسل"
-        borderColor="purple"
-      />
-    </div>
-  );
-};
+const CARD_WIDTH = 350;
 
-const ShimmerBorderCard = ({ imgSrc, title, text, borderColor }) => {
-  const gradientColor =
-    borderColor === "orange"
-      ? "from-orange-600 via-orange-600/0 to-orange-600"
-      : "from-purple-600 via-purple-600/0 to-purple-600";
+const BlogPostCarousel = () => {
+  const displayPosts = posts.slice(0, 2); 
 
   return (
-    <div className="group shadow-lg border border-gray-300 relative mx-auto w-full max-w-sm overflow-hidden rounded-lg bg-zinc-800 p-0.5 transition-all duration-500 hover:scale-[1.01]">
-      <div className="relative z-10 overflow-hidden rounded-[7px] bg-zinc-800 p-8">
-        <img
-          src={imgSrc}
-          alt="Card Icon"
-          className="z-10 top-5 right-5 h-14 w-14"
-        />
-        <h4 className="mt-5 relative z-10 mb-4 w-full text-3xl font-bold text-white">
-          {title}
-        </h4>
-        <p className="relative z-10 text-white">{text}</p>
+    <section className=" py-8">
+      <div className="mx-auto max-w-6xl">
+  
+        <div className="flex flex-wrap gap-24 justify-center">
+          {displayPosts.map((post) => (
+            <Post key={post.id} {...post} />
+          ))}
+        </div>
       </div>
+    </section>
+  );
+};
 
-      <motion.div
-        initial={{ rotate: "0deg" }}
-        animate={{ rotate: "360deg" }}
-        style={{ scale: 1.75 }}
-        transition={{
-          repeat: Infinity,
-          duration: 3.5,
-          ease: "linear",
-        }}
-        className={`absolute inset-0 z-0 bg-gradient-to-br ${gradientColor} opacity-0 transition-opacity duration-500 group-hover:opacity-100`}
+const Post = ({ imgUrl, title, description }) => {
+  return (
+    <div
+      className="relative shrink-0 cursor-pointer transition-transform hover:-translate-y-1"
+      style={{
+        width: CARD_WIDTH,
+      }}
+    >
+      <img
+        src={imgUrl}
+        className="mb-3 h-[200px] w-full rounded-lg hover:shadow-xl object-cover"
+        alt={`An image for a fake blog post titled ${title}`}
       />
+      <p className="mt-1.5 text-2xl text-center font-bold">{title}</p>
+      <p className="text-sm text-center text-neutral-500">{description}</p>
     </div>
   );
 };
 
-export default VisionAndMessage;
+export default BlogPostCarousel;
+
+const posts = [
+  {
+    id: 1,
+    imgUrl: "/images/dummy4.jpg",
+    title: "رؤيتنا",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
+  },
+  {
+    id: 2,
+    imgUrl: "/images/dummy5.jpg",
+    title: "رسالتنا",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
+  },
+];
