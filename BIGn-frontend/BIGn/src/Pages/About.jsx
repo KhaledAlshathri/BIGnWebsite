@@ -2,6 +2,7 @@ import React from 'react';
 import AboutUs from '../components/AboutUs';
 import VisionAndMessage from '../components/VisionAndMEssage';
 import CountUpStats from '../components/CountUpStats';
+import Principles from '../components/Principles';
 
 const About = () => {
   return (
@@ -11,6 +12,7 @@ const About = () => {
       </div>
       <CountUpStats />
       <VisionAndMessage />
+      <Principles />
     </>
   );
 };
