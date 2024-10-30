@@ -41,7 +41,7 @@ const ActivitiesCards = () => {
   return (
     <section onMouseMove={handleMouseMove} className="overflow-hidden px-8 py-24">
       <div className="w-full px-8 py-12 md:py-20 flex flex-col items-center">
-        <h3 className="text-center text-5xl md:text-5xl max-w-xl font-semibold">أنشطتنا</h3>
+        <h3 className="text-center text-4xl md:text-5xl max-w-xl font-semibold">أنشطتنا</h3>
       </div>
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-8 sm:flex-row">
         <Card title="برنامج مُلم" href="/activities" bg={melmImage} />

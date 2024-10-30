@@ -15,8 +15,8 @@ const Partners = () => {
   return (
     <section className="bg-white py-24 px-4 lg:px-8 grid items-center grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4 overflow-hidden">
       <div className="p-4">
-        <h3 className="text-5xl font-semibold">شركاءنا</h3>
-        <p className="text-slate-500 my-4">
+        <h3 className="md:text-5xl text-4xl text-center font-semibold">شركاءنا</h3>
+        <p className="text-slate-500 text-center my-4">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
           commodi sint, similique cupiditate possimus suscipit delectus illum
           eos iure magnam!

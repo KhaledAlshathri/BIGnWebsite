@@ -4,9 +4,9 @@ import { animate, useInView } from "framer-motion";
 const CountUpStats = () => {
   return (
     <div className="mx-auto max-w-3xl px-4 pb-10 pt-20 md:py-24">
-      <h2 className="mb-8 text-center text-base text-indigo-900 sm:text-lg md:mb-16">
-        BUILD TRUST WITH YOUR USERS WITH A
-        <span className="text-[#FF3C10]"> BEAUTIFUL LANDING PAGE</span>
+      <h2 className="mb-8 text-center text-base text-indigo-900 sm:text-2xl text-lg md:mb-16">
+        إحصائيات نفخر بها في مبادرة
+        <span className="text-[#FF3C10]"> BIG n</span>
       </h2>
 
       <div className="flex flex-col items-center justify-center sm:flex-row">
@@ -52,7 +52,7 @@ const Stat = ({ num, suffix, decimals = 0, subheading }) => {
 
   return (
     <div className="flex w-72 flex-col items-center py-8 sm:py-0">
-      <p className="mb-2 text-center text-7xl font-semibold sm:text-6xl">
+      <p className="mb-2 text-center md:text-7xl text-5xl font-semibold sm:text-6xl">
         <span ref={ref}></span>
         {suffix}
       </p>

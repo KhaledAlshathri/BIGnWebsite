@@ -29,7 +29,7 @@ const ShimmerBorderCard = ({ imgSrc, title, text, borderColor }) => {
       : "from-purple-600 via-purple-600/0 to-purple-600";
 
   return (
-    <div className="group shadow-xl border border-gray-300 relative mx-auto w-full max-w-sm overflow-hidden rounded-lg bg-zinc-800 p-0.5 transition-all duration-500 hover:scale-[1.01]">
+    <div className="group shadow-lg border border-gray-300 relative mx-auto w-full max-w-sm overflow-hidden rounded-lg bg-zinc-800 p-0.5 transition-all duration-500 hover:scale-[1.01]">
       <div className="relative z-10 overflow-hidden rounded-[7px] bg-zinc-800 p-8">
         <img
           src={imgSrc}
