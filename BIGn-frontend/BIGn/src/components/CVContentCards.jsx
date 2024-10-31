@@ -14,25 +14,24 @@ const PERSPECTIVE = "1500px";
 const cardContents = [
   {
     id: 1,
-    imageUrl: "/images/Publication1.png",
+    imageUrl: "/images/CV1.png",
   },
   {
     id: 2,
-    imageUrl: "/images/Publication2.png",
+    imageUrl: "/images/CV2.png",
   },
-
 ];
 
-const TechContentCards = () => {
+const CVContentCards = () => {
   return (
     <div
       style={{
         backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke-width='2' stroke='%23d4d4d4'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e")`,
       }}
-      className="relative h-full min-h-screen bg-neutral-100 px-20 pt-32 pb-20"
+      className="relative h-full min-h-screen bg-neutral-100 px-20"
     >
       <h1 className="mb-16 text-center text-4xl md:text-5xl font-bold text-gray-800">
-        المنشورات التقنية
+        السير الذاتية
       </h1>
 
       <div className="flex flex-wrap place-content-center gap-32">
@@ -40,6 +39,7 @@ const TechContentCards = () => {
           <TiltShineCard key={content.id} imageUrl={content.imageUrl} />
         ))}
       </div>
+      <div className="pb-44"></div>
     </div>
   );
 };
@@ -88,7 +88,7 @@ const TiltShineCard = ({ imageUrl }) => {
       style={{
         perspective: PERSPECTIVE,
       }}
-      className="flex justify-center  "
+      className="flex justify-center"
     >
       <motion.div
         ref={ref}
@@ -99,7 +99,7 @@ const TiltShineCard = ({ imageUrl }) => {
           backgroundImage: `url(${imageUrl})`,
           backgroundSize: "cover",
         }}
-        className="relative aspect-[9/13] w-80 max-w-xs overflow-hidden rounded-lg bg-zinc-950 shadow-2xl shadow-zinc-950 transition-transform h-[510px]"
+        className="relative aspect-[9/13] w-80 max-w-xs overflow-hidden rounded-lg bg-zinc-950 shadow-2xl shadow-zinc-950 transition-transform"
       >
         <motion.div
           style={{
@@ -112,4 +112,4 @@ const TiltShineCard = ({ imageUrl }) => {
   );
 };
 
-export default TechContentCards;
+export default CVContentCards;
