@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 
-const TechContent = () => {
+const TechContentView = () => {
   return (
-    <section className="px-4 py-12 pb-20 ">
+    <section className="px-4 py-12 pb-44 ">
       <div className="w-full px-8 py-12 md:py-20 flex flex-col items-center">
         <h3 className="text-center text-4xl md:text-5xl max-w-xl font-semibold">
           النشرات التقنية
@@ -250,4 +250,4 @@ const BackgroundC = () => {
   );
 };
 
-export default TechContent;
+export default TechContentView;

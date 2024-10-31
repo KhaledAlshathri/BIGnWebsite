@@ -7,7 +7,7 @@ const Principles = () => {
   const displayItems = items.slice(0, 3);
 
   return (
-    <section className=" p-4">
+    <section className=" p-4 pb-44">
       <div className="mx-auto max-w-6xl ">
         <p className="mb-10 mt-16 text-4xl sm:text-5xl text-center font-semibold">
           قيمنا

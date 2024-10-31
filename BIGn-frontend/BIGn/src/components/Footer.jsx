@@ -4,7 +4,7 @@ import { SiTiktok } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <footer dir="rtl" className="bg-zinc-800 text-white py-8 mt-20">
+    <footer dir="rtl" className="bg-zinc-800 text-white py-8">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
         {/* Social Media Icons */}
         <div className="flex space-x-4 space-x-reverse mb-4 md:mb-0">
@@ -34,7 +34,7 @@ const Footer = () => {
           الأنشطة
           </a>
           <a href="/content" className="hover:text-gray-400">
-          المنشورات التقنية
+          النشرة التقنية
           </a>
           <a href="/members" className="hover:text-gray-400 md:mr-6">
           الهيكلة

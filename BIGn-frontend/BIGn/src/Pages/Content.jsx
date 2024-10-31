@@ -1,9 +1,10 @@
 import React from 'react';
+import TechContentCards from '../components/TechContentCards';
 
 const Content = () => {
   return (
     <>
-      <h1>Content</h1>
+      <TechContentCards />
     </>
   );
 };

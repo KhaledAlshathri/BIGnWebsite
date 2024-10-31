@@ -3,7 +3,7 @@ import CountUpStats from '../components/CountUpStats'
 import AboutUs from '../components/AboutUs'
 import ActivitiesCards from '../components/ActivitiesCards'
 import Partners from '../components/Partners'
-import TechContent from '../components/TechContent'
+import TechContentView from '../components/TechContentView'
 
 
 
@@ -15,7 +15,7 @@ function App() {
     <AboutUs />
     <ActivitiesCards />
     <Partners />
-    <TechContent />
+    <TechContentView />
     </>
   )
 }

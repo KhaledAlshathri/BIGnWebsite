@@ -42,7 +42,7 @@ const NavLeft = ({ setIsOpen }) => {
       {/* Navigation links, hidden on small screens */}
       <div className="hidden lg:flex items-center gap-8">
         <MenuLink text="الهيكلة" href="/members" />
-        <MenuLink text="المنشورات التقنية" href="/content" />
+        <MenuLink text="النشرة التقنية" href="/content" />
         <MenuLink text="الأنشطة" href="/activities" />
         <MenuLink text="من نحن" href="/about" />
         <MenuLink text="الرئيسية" href="/" />
@@ -93,7 +93,7 @@ const NavMenu = ({ isOpen }) => {
       className="absolute left-0 right-0 top-full origin-top flex flex-col gap-4 bg-white p-4 shadow-lg"
     >
       <MenuLink text="الهيكلة" href="/members" />
-      <MenuLink text="المنشورات التقنية" href="/content" />
+      <MenuLink text="النشرة التقنية" href="/content" />
       <MenuLink text="الأنشطة" href="/activities" />
       <MenuLink text="من نحن" href="/about" />
       <MenuLink text="الرئيسية" href="/" />
