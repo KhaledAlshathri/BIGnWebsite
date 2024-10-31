@@ -1,11 +1,14 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import {
   motion,
   useMotionTemplate,
   useMotionValue,
   useSpring,
   useTransform,
+  useDragControls,
+  useAnimate,
 } from "framer-motion";
+import useMeasure from "react-use-measure";
 
 const ROTATION_RANGE = 35;
 const HALF_ROTATION_RANGE = ROTATION_RANGE / 2;
@@ -20,10 +23,12 @@ const cardContents = [
     id: 2,
     imageUrl: "/images/Publication2.png",
   },
-
 ];
 
 const TechContentCards = () => {
+  const [open, setOpen] = useState(false);
+  const [selectedCard, setSelectedCard] = useState(null);
+
   return (
     <div
       style={{
@@ -37,14 +42,41 @@ const TechContentCards = () => {
 
       <div className="flex flex-wrap place-content-center gap-32">
         {cardContents.map((content) => (
-          <TiltShineCard key={content.id} imageUrl={content.imageUrl} />
+          <TiltShineCard
+            key={content.id}
+            imageUrl={content.imageUrl}
+            onClick={() => {
+              setSelectedCard(content);
+              setOpen(true);
+            }}
+          />
         ))}
       </div>
+
+      <DragCloseDrawer open={open} setOpen={setOpen}>
+        <div className="mx-auto max-w-2xl space-y-4 text-neutral-400">
+          <h2 className="text-4xl font-bold text-center text-neutral-200 mb-10">
+            محتوى المنشور
+          </h2>
+          {selectedCard && (
+            <div>
+              <img
+                src={selectedCard.imageUrl}
+                alt="Selected Publication"
+                className="mb-4 w-full rounded"
+              />
+              <p className="text-center">
+                هذا هو المحتوى الخاص بالمنشور التقني المختار. 
+              </p>
+            </div>
+          )}
+        </div>
+      </DragCloseDrawer>
     </div>
   );
 };
 
-const TiltShineCard = ({ imageUrl }) => {
+const TiltShineCard = ({ imageUrl, onClick }) => {
   const ref = useRef(null);
 
   const x = useMotionValue(0);
@@ -88,18 +120,19 @@ const TiltShineCard = ({ imageUrl }) => {
       style={{
         perspective: PERSPECTIVE,
       }}
-      className="flex justify-center  "
+      className="flex justify-center"
     >
       <motion.div
         ref={ref}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
+        onClick={onClick}
         style={{
           transform,
           backgroundImage: `url(${imageUrl})`,
           backgroundSize: "cover",
         }}
-        className="relative aspect-[9/13] w-80 max-w-xs overflow-hidden rounded-lg bg-zinc-950 shadow-2xl shadow-zinc-950 transition-transform h-[510px]"
+        className="relative aspect-[9/13] w-80 max-w-xs overflow-hidden rounded-lg bg-zinc-950 shadow-2xl shadow-zinc-950 transition-transform h-[510px] cursor-pointer"
       >
         <motion.div
           style={{
@@ -109,6 +142,83 @@ const TiltShineCard = ({ imageUrl }) => {
         />
       </motion.div>
     </div>
+  );
+};
+
+const DragCloseDrawer = ({ open, setOpen, children }) => {
+  const [scope, animate] = useAnimate();
+  const [drawerRef, { height }] = useMeasure();
+
+  const y = useMotionValue(0);
+  const controls = useDragControls();
+
+  const handleClose = async () => {
+    animate(scope.current, {
+      opacity: [1, 0],
+    });
+
+    const yStart = typeof y.get() === "number" ? y.get() : 0;
+
+    await animate("#drawer", {
+      y: [yStart, height],
+    });
+
+    setOpen(false);
+  };
+
+  return (
+    <>
+      {open && (
+        <motion.div
+          ref={scope}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          onClick={handleClose}
+          className="fixed inset-0 z-50 bg-neutral-950/70"
+        >
+          <motion.div
+            id="drawer"
+            ref={drawerRef}
+            onClick={(e) => e.stopPropagation()}
+            initial={{ y: "100%" }}
+            animate={{ y: "0%" }}
+            transition={{
+              ease: "easeInOut",
+            }}
+            className="absolute bottom-0 h-[75vh] w-full overflow-hidden rounded-t-3xl bg-neutral-900"
+            style={{ y }}
+            drag="y"
+            dragControls={controls}
+            onDragEnd={() => {
+              if (y.get() >= 100) {
+                handleClose();
+              }
+            }}
+            dragListener={false}
+            dragConstraints={{
+              top: 0,
+              bottom: 0,
+            }}
+            dragElastic={{
+              top: 0,
+              bottom: 0.5,
+            }}
+          >
+            <div className="absolute left-0 right-0 top-0 z-10 flex justify-center bg-neutral-900 p-4">
+              <button
+                onPointerDown={(e) => {
+                  controls.start(e);
+                }}
+                className="h-2 w-14 cursor-grab touch-none rounded-full bg-neutral-700 active:cursor-grabbing"
+              ></button>
+            </div>
+            <div className="relative z-0 h-full overflow-y-scroll p-4 pt-12">
+              {children}
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </>
   );
 };
 
