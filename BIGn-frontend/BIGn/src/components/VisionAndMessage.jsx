@@ -2,7 +2,7 @@ import React from "react";
 
 const CARD_WIDTH = 350;
 
-const BlogPostCarousel = () => {
+const VisionAndMessage = () => {
   const displayPosts = posts.slice(0, 2); 
 
   return (
@@ -38,7 +38,7 @@ const Post = ({ imgUrl, title, description }) => {
   );
 };
 
-export default BlogPostCarousel;
+export default VisionAndMessage;
 
 const posts = [
   {

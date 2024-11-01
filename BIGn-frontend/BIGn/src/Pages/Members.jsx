@@ -1,9 +1,10 @@
 import React from 'react';
+import MembersCards from '../components/MembersCards';
 
 const Members = () => {
   return (
     <div>
-      <h1>Members</h1>
+      <MembersCards />
     </div>
   );
 };

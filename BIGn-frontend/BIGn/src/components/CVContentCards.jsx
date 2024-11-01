@@ -65,7 +65,7 @@ const CVContentCards = () => {
               <img
                 src={selectedCard.imageUrl}
                 alt="Selected CV"
-                className="mb-4 w-full rounded"
+                className="mb-4 w-full rounded-[2%]"
               />
               <p className="text-center">
                 هذا هو المحتوى الخاص بالسيرة الذاتية المختارة. 

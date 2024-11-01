@@ -56,7 +56,7 @@ const Card = ({
       }}
       className={`relative h-96 w-80 shrink-0 overflow-hidden rounded-xl p-8 ${background}`}
     >
-      <div className="relative z-10 text-white">
+      <div className="grid relative z-10 text-center place-content-center text-white">
         
         <motion.span
           initial={{ scale: 0.85 }}
@@ -69,16 +69,18 @@ const Card = ({
             duration: 1,
             ease: "backInOut",
           }}
-          className="my-2 block origin-top-left font-semibold text-2xl font-black leading-[1.2]"
+          className="my-2 ml-6 origin-top-left font-semibold text-2xl text-center font-black leading-[1.2]"
         >
           {Title}
           
         </motion.span>
         <p className="text-lg">{description}</p>
       </div>
+      <a href="/content">
       <button className="absolute bottom-4 left-4 right-4 z-20 rounded border-2 border-white bg-white py-2 text-center font-semibold font-black uppercase text-neutral-800 backdrop-blur transition-colors hover:bg-white/30 hover:text-white">
         {cta}
       </button>
+      </a>
       <BGComponent />
     </motion.div>
   );

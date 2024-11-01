@@ -8,6 +8,10 @@ body {
   background-color: white;
 }
 
+*{
+  font-family: "Changa", sans-serif;
+}
+
 .purple_color{
   color: #360E91 ;
 }

@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
-import { twMerge } from "tailwind-merge";
 import {
     motion,
     useMotionTemplate,
@@ -289,6 +288,7 @@ const NeuFollowButton = () => {
 
   return (
     <section>
+     <a href="/about">
       <div className="mx-auto h-20 w-full max-w-72 bg-black">
         <motion.button
           ref={ref}
@@ -300,10 +300,12 @@ const NeuFollowButton = () => {
           onMouseDown={handleReset}
           className="group flex h-full w-full items-center justify-between border-2 border-black bg-white pr-8 pl-4 text-xl font-semibold"
         >
+          
           <Copy>أعرف المزيد</Copy>
           <Arrow />
         </motion.button>
       </div>
+     </a>
     </section>
   );
 };

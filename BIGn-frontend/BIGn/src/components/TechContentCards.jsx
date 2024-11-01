@@ -63,7 +63,7 @@ const TechContentCards = () => {
               <img
                 src={selectedCard.imageUrl}
                 alt="Selected Publication"
-                className="mb-4 w-full rounded"
+                className="mb-4 w-full rounded-[2%]"
               />
               <p className="text-center">
                 هذا هو المحتوى الخاص بالمنشور التقني المختار. 
