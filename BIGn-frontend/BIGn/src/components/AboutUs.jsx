@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
-import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si";
 
 const AboutUs = () => {
@@ -46,7 +46,7 @@ const Block = ({ className, ...rest }) => {
         damping: 50,
       }}
       className={twMerge(
-        "col-span-4 rounded-lg border border-zinc-700 bg-zinc-800 p-6",
+        "col-span-4 rounded-lg border border-zinc-700 bg-[#360E91] p-6",
         className
       )}
       {...rest}
@@ -131,7 +131,7 @@ const SocialsBlock = () => (
         href="#"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <FaInstagram />
+        <FaEnvelope />
       </a>
     </Block>
   </>

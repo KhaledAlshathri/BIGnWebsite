@@ -92,11 +92,11 @@ const NavMenu = ({ isOpen }) => {
       animate={isOpen ? 'open' : 'closed'}
       className="absolute left-0 right-0 top-full origin-top flex flex-col gap-4 bg-white p-4 shadow-lg"
     >
-      <MenuLink text="الهيكلة" href="/members" />
-      <MenuLink text="النشرة التقنية" href="/content" />
-      <MenuLink text="الأنشطة" href="/activities" />
-      <MenuLink text="من نحن" href="/about" />
       <MenuLink text="الرئيسية" href="/" />
+      <MenuLink text="من نحن" href="/about" />
+      <MenuLink text="الأنشطة" href="/activities" />
+      <MenuLink text="النشرة التقنية" href="/content" />
+      <MenuLink text="الهيكلة" href="/members" />
     </motion.div>
   )
 }

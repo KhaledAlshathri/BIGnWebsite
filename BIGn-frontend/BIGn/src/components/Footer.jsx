@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si";
 
 const Footer = () => {
@@ -14,11 +14,11 @@ const Footer = () => {
           <a href="#" aria-label="تيك توك" className="hover:text-gray-400">
             <SiTiktok size={20} />
           </a>
-          <a href="#" aria-label="إنستغرام" className="hover:text-gray-400">
-            <FaInstagram size={20} />
-          </a>
           <a href="#" aria-label="لينكدإن" className="hover:text-gray-400">
             <FaLinkedinIn size={20} />
+          </a>
+          <a href="#" aria-label="إنستغرام" className="hover:text-gray-400">
+            <FaEnvelope size={20} />
           </a>
         </div>
 

@@ -21,7 +21,7 @@ const cardContents = [
   },
   {
     id: 2,
-    imageUrl: "/images/CV2.png",
+    imageUrl: "/images/CV1.png",
   },
 ];
 

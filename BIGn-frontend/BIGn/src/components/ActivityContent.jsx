@@ -9,28 +9,6 @@ const ActivityContent = () => {
   const cards = [
     {
       id: 1,
-      tag: "برنامج مُلم",
-      text: (
-        <>
-          <strong>ودك تطبق مهاراتك في سوق العمل بس مو عارف كيف؟</strong> مُلم وفر
-          هذي الفرصة ادخل وجرب مهاراتك
-        </>
-      ),
-      examples: [
-        "تبي تطبق مهاراتك؟",
-        "تبي خبرة عملية؟",
-        "تبي تعمل في فريق؟",
-        "تبي تجربة جديدة؟",
-      ],
-      image: "/images/mulm-logo.png",
-      logoBackground: "/images/Mulem.png",
-      backgroundImage: "/images/dummy1.jpg",
-      buttonText: "سجل الآن!",
-      buttonColor: "orange-700",
-      message: "خلك قريب وتابعنا على مواقع التواصل الاجتماعي لتعرف أكثر عن برنامج مُلم!",
-    },
-    {
-      id: 2,
       tag: "الملتقى التقني",
       text: (
         <>
@@ -50,6 +28,28 @@ const ActivityContent = () => {
       buttonText: "سجل الآن!",
       buttonColor: "cyan-400",
       message: "خلك قريب وتابعنا على مواقع التواصل الاجتماعي لتعرف عن أكثر الملتقى التقني!",
+    },
+    {
+      id: 2,
+      tag: "برنامج مُلم",
+      text: (
+        <>
+          <strong>ودك تطبق مهاراتك في سوق العمل بس مو عارف كيف؟</strong> مُلم وفر
+          هذي الفرصة ادخل وجرب مهاراتك
+        </>
+      ),
+      examples: [
+        "تبي تطبق مهاراتك؟",
+        "تبي خبرة عملية؟",
+        "تبي تعمل في فريق؟",
+        "تبي تجربة جديدة؟",
+      ],
+      image: "/images/mulm-logo.png",
+      logoBackground: "/images/Mulem.png",
+      backgroundImage: "/images/dummy1.jpg",
+      buttonText: "سجل الآن!",
+      buttonColor: "orange-700",
+      message: "خلك قريب وتابعنا على مواقع التواصل الاجتماعي لتعرف أكثر عن برنامج مُلم!",
     },
     {
       id: 3,
@@ -82,7 +82,7 @@ const ActivityContent = () => {
           className="mx-auto grid max-w-4xl grid-flow-dense grid-cols-12 gap-4 my-20 py-10"
         >
           {/* Title Block */}
-          <Block className="col-span-12 p-5 flex items-center justify-center bg-zinc-800">
+          <Block className="col-span-12 p-5 flex items-center justify-center bg-[#360E91]">
             <h2 className="text-2xl sm:text-3xl font-bold text-center">
               {card.tag}
             </h2>
@@ -111,7 +111,7 @@ const ActivityContent = () => {
           </Block>
 
           {/* Text with Typing Animation Block */}
-          <Block className="col-span-12 bg-zinc-800 h-[250px] relative">
+          <Block className="col-span-12 bg-[#360E91] h-[250px] relative">
             <p className="text-base sm:text-lg leading-relaxed mb-4">
               {card.text}
             </p>
@@ -213,9 +213,9 @@ const Typewrite = ({ examples }) => {
 
 const RoundedSlideButton = ({ buttonText, buttonColor, onClick }) => {
   const colorClassMap = {
-    "orange-700": "text-orange-700 border-orange-700 before:bg-orange-700",
-    "cyan-400": "text-cyan-400 border-cyan-400 before:bg-cyan-400",
-    "violet-600": "text-violet-600 border-violet-600 before:bg-violet-600",
+    "orange-700": "text-white border-white before:bg-white",
+    "cyan-400": "text-white border-white before:bg-white",
+    "violet-600": "text-white border-white before:bg-white",
   };
 
   const colorClasses = colorClassMap[buttonColor] || "";

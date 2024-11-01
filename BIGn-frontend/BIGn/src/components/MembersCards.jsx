@@ -36,15 +36,15 @@ const Post = ({ imgUrl, title, description, size, linkedinUrl }) => {
 
   switch (size) {
     case "large":
-      cardWidth = 250;
-      cardHeight = 250;
+      cardWidth = 215;
+      cardHeight = 215;
       fontSizeTitle = "text-3xl";
       fontSizeDescription = "text-base";
       break;
     case "medium":
-      cardWidth = 175;
-      cardHeight = 175;
-      fontSizeTitle = "text-2xl";
+      cardWidth = 160;
+      cardHeight = 160;
+      fontSizeTitle = "text-xl";
       fontSizeDescription = "text-sm";
       break;
     case "small":
@@ -92,10 +92,10 @@ export default MembersCards;
 const largeCards = [
   { id: 1, imgUrl: "/images/girl-icon.png", title: "لمى الشديّد", description: "رئيسة المبادرة", linkedinUrl: "https://www.linkedin.com/in/lama-shd/" },
   { id: 2, imgUrl: "/images/girl-icon.png", title: "لمى الغيلان", description: "نائبة رئيسة المبادرة", linkedinUrl: "https://www.linkedin.com/in/lama-gh/" },
+  { id: 3, imgUrl: "/images/boy-icon.png", title: "عبدالله الزهراني", description: "عضو فريق المبادرة", linkedinUrl: "https://www.linkedin.com/in/abdullah-zahrani/" },
 ];
 
 const mediumCards = [
-  { id: 3, imgUrl: "/images/boy-icon.png", title: "عبدالله الزهراني", description: "عضو فريق المبادرة", linkedinUrl: "https://www.linkedin.com/in/abdullah-zahrani/" },
   { id: 4, imgUrl: "/images/girl-icon.png", title: "ريم الناصر", description: "مسؤول التسويق", linkedinUrl: "https://www.linkedin.com/in/reem-naser/" },
   { id: 5, imgUrl: "/images/boy-icon.png", title: "بدر القحطاني", description: "مساعد تقني", linkedinUrl: "https://www.linkedin.com/in/bader-q/" },
   { id: 6, imgUrl: "/images/girl-icon.png", title: "نورة الشهري", description: "مدير المشاريع", linkedinUrl: "https://www.linkedin.com/in/nora-shahri/" },
