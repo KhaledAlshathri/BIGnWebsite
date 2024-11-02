@@ -1,9 +1,10 @@
 import React from 'react';
+import MultaqaCards from '../components/MultaqaCards';
 
 const Multaqa = () => {
   return (
     <div>
-      <h1>Multaqa page</h1>
+      <MultaqaCards />
     </div>
   );
 };

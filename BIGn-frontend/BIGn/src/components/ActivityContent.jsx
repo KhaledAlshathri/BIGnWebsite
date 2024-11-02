@@ -100,14 +100,12 @@ const ActivityContent = () => {
           }}
           className="mx-auto grid max-w-4xl grid-flow-dense grid-cols-12 gap-4 my-20 py-10"
         >
-          {/* Title Block */}
           <Block className="col-span-12 p-5 flex items-center justify-center bg-[#360E91]">
             <h2 className="text-2xl sm:text-3xl font-bold text-center">
               {card.tag}
             </h2>
           </Block>
 
-          {/* Background Image Block */}
           <Block className="col-span-7 sm:col-span-8 bg-zinc-800 relative overflow-hidden">
             <div
               className="w-full h-full bg-cover bg-center absolute inset-0"
@@ -115,7 +113,6 @@ const ActivityContent = () => {
             ></div>
           </Block>
 
-          {/* Logo Block with Animation */}
           <Block
             className="col-span-5 sm:col-span-4 bg-zinc-800 aspect-square relative overflow-hidden"
             whileHover={{
@@ -129,7 +126,6 @@ const ActivityContent = () => {
             ></div>
           </Block>
 
-          {/* Text with Typing Animation Block */}
           <Block className="col-span-12 bg-[#360E91] h-[250px] relative">
             <p className="text-base sm:text-lg leading-relaxed mb-4">
               {card.text}
@@ -139,7 +135,7 @@ const ActivityContent = () => {
               <RoundedSlideButton
                 buttonText={card.buttonText}
                 buttonColor={card.buttonColor}
-                onClick={() => handleButtonClick(card)} // Use the new onClick handler
+                onClick={() => handleButtonClick(card)} 
               />
             </div>
           </Block>
