@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import { AnimatePresence, motion } from "framer-motion";
 import { FiLogIn, FiAlertCircle } from "react-icons/fi";
 import { twMerge } from "tailwind-merge";
 
 const ActivityContent = () => {
   const [activeModal, setActiveModal] = useState(null); // Track which modal is open
+  const navigate = useNavigate(); // Get the navigate function from React Router
 
   const cards = [
     {
@@ -27,7 +29,10 @@ const ActivityContent = () => {
       backgroundImage: "/images/dummy2.jpg",
       buttonText: "سجل الآن!",
       buttonColor: "cyan-400",
-      message: "خلك قريب وتابعنا على مواقع التواصل الاجتماعي لتعرف عن أكثر الملتقى التقني!",
+      message:
+        "خلك قريب وتابعنا على مواقع التواصل الاجتماعي لتعرف عن أكثر الملتقى التقني!",
+      activityOpen: true, // Activity is open
+      activityLink: "/Multaqa", // Links to Multaqa Page when the activity is open
     },
     {
       id: 2,
@@ -49,7 +54,10 @@ const ActivityContent = () => {
       backgroundImage: "/images/dummy1.jpg",
       buttonText: "سجل الآن!",
       buttonColor: "orange-700",
-      message: "خلك قريب وتابعنا على مواقع التواصل الاجتماعي لتعرف أكثر عن برنامج مُلم!",
+      message:
+        "خلك قريب وتابعنا على مواقع التواصل الاجتماعي لتعرف أكثر عن برنامج مُلم!",
+      activityOpen: false, // Activity is closed
+      activityLink: "/Mulm", // Links to Mulem Page when the activity is open
     },
     {
       id: 3,
@@ -65,9 +73,20 @@ const ActivityContent = () => {
       backgroundImage: "/images/dummy3.jpg",
       buttonText: "سجل الآن!",
       buttonColor: "violet-600",
-      message: "خلك قريب وتابعنا على مواقع التواصل الاجتماعي لتعرف أكثر عن تدريب الBIG O's!",
+      message:
+        "خلك قريب وتابعنا على مواقع التواصل الاجتماعي لتعرف أكثر عن تدريب الBIG O's!",
+      activityOpen: false, // Activity is closed
+      activityLink: "/BigOs", // Links to BigOs Page when the activity is open
     },
   ];
+
+  const handleButtonClick = (card) => {
+    if (card.activityOpen) {
+      navigate(card.activityLink); // Navigate to the activity page
+    } else {
+      setActiveModal(card.id); // Show the modal message
+    }
+  };
 
   return (
     <div className="px-4 py-12 text-zinc-50">
@@ -120,7 +139,7 @@ const ActivityContent = () => {
               <RoundedSlideButton
                 buttonText={card.buttonText}
                 buttonColor={card.buttonColor}
-                onClick={() => setActiveModal(card.id)} // Open specific modal
+                onClick={() => handleButtonClick(card)} // Use the new onClick handler
               />
             </div>
           </Block>
@@ -251,7 +270,6 @@ const RoundedSlideButton = ({ buttonText, buttonColor, onClick }) => {
   );
 };
 
-// Modal Component with a custom message
 const DontHaveActivityNow = ({ isOpen, setIsOpen, message }) => {
   return (
     <AnimatePresence>

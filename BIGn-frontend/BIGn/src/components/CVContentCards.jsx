@@ -21,7 +21,7 @@ const cardContents = [
   },
   {
     id: 2,
-    imageUrl: "/images/CV1.png",
+    imageUrl: "/images/CV2.png",
   },
 ];
 
@@ -134,7 +134,7 @@ const TiltShineCard = ({ imageUrl, onClick }) => {
           backgroundImage: `url(${imageUrl})`,
           backgroundSize: "cover",
         }}
-        className="relative aspect-[9/13] w-80 max-w-xs overflow-hidden rounded-lg bg-zinc-950 shadow-2xl shadow-zinc-950 transition-transform cursor-pointer"
+        className="relative aspect-[14/20] w-80 max-w-xs overflow-hidden rounded-lg bg-zinc-950 shadow-2xl shadow-zinc-950 transition-transform cursor-pointer"
       >
         <motion.div
           style={{
