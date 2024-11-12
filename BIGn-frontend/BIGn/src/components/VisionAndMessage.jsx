@@ -43,16 +43,16 @@ export default VisionAndMessage;
 const posts = [
   {
     id: 1,
-    imgUrl: "/images/dummy4.jpg",
+    imgUrl: "/images/Vision.jpg",
     title: "رؤيتنا",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
+      "مجتمع تقني حيوي مُمَكّن ويزخر بالكفاءات التقنية من طلبة وطالبات جامعات المملكة العربية السعودية.",
   },
   {
     id: 2,
-    imgUrl: "/images/dummy5.jpg",
+    imgUrl: "/images/Message.jpg",
     title: "رسالتنا",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
+      "نسعى لتعزيز المعرفة التقنية وتنمية الحصيلة المهنية من خلال إقامة أنشطة مبتكرة ومنافسات برمجية.",
   },
 ];

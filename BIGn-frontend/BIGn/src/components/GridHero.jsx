@@ -52,9 +52,9 @@ const Content = () => {
           delay: 0.25,
           ease: "easeInOut",
         }}
-        className="purple_color mb-3 text-center text-3xl font-bold leading-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight lg:text-7xl lg:leading-tight"
+        className="purple_color mb-3 text-center text-3xl font-bold leading-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight lg:leading-tight"
       >
-        BIG n is the best
+        Big n نحو مستقبل تقني أفضل
       </motion.h1>
       <motion.p
         initial={{
@@ -72,8 +72,7 @@ const Content = () => {
         }}
         className="interface-text mb-9 max-w-2xl text-center text-base leading-relaxed sm:text-lg md:text-lg md:leading-relaxed"
       >
-        Build beautiful landing pages for your startups, clients, and side
-        projects, without having to think about design.
+       معاً، لمجتمع تقني يُمكّن الطلاب في جميع مجالاتهم، ويساهم في تطوير مهاراتهم التقنية
       </motion.p>
       <motion.div
         initial={{

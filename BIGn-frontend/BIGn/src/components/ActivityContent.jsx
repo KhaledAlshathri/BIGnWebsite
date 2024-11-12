@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { FiLogIn, FiAlertCircle } from "react-icons/fi";
 import { twMerge } from "tailwind-merge";
 
 const ActivityContent = () => {
   const [activeModal, setActiveModal] = useState(null); // Track which modal is open
-  const navigate = useNavigate(); // Get the navigate function from React Router
+  const navigate = useNavigate(); 
 
   const cards = [
     {
       id: 1,
-      tag: "الملتقى التقني",
+      tag: "ملتقى BIG n التقني ",
       text: (
         <>
-          <strong>ودك تشوف تقاطعات التقنية مع باقي التخصصات؟</strong> الملتقى التقني
-          راح يوفر لك هذا الشيء! سجل الآن واحضر وتثقف
+          <strong>ماهو ملتقى Big n التقني؟</strong> تشكل التقنية عنصرًا أساسيًا في تطور التخصصات والأعمال، حيث نتيح لكم فرصة التعرف على أهم التقنيات الحديثة التي تسهم في تسريع عجلة التنمية والتطور في المجالات البيئية، العملية، والشخصية.
         </>
       ),
       examples: [
@@ -24,9 +23,8 @@ const ActivityContent = () => {
         "وسع مداركك التقنية!",
         "شاركنا المعرفة!",
       ],
-      image: "/images/tech-meeting-logo.png",
-      logoBackground: "/images/Tech-meeting.png",
-      backgroundImage: "/images/dummy2.jpg",
+      logoBackground: "/videos/Multaqa-logo.mp4",
+      backgroundImage: "/images/Multaqa-pic.png",
       buttonText: "سجل الآن!",
       buttonColor: "cyan-400",
       message:
@@ -39,8 +37,7 @@ const ActivityContent = () => {
       tag: "برنامج مُلم",
       text: (
         <>
-          <strong>ودك تطبق مهاراتك في سوق العمل بس مو عارف كيف؟</strong> مُلم وفر
-          هذي الفرصة ادخل وجرب مهاراتك
+          <strong>برنامج مُلم</strong> هو برنامج يهدف إلى تأهيل الطالب لسوق العمل وسد الفجوات المهنية بين خريجي الجامعات والواقع المهني عبر خلق شراكات استراتيجية تمكنهم من المتطلبات المهنية والشخصية والتقنية.
         </>
       ),
       examples: [
@@ -49,9 +46,8 @@ const ActivityContent = () => {
         "تبي تعمل في فريق؟",
         "تبي تجربة جديدة؟",
       ],
-      image: "/images/mulm-logo.png",
-      logoBackground: "/images/Mulem.png",
-      backgroundImage: "/images/dummy1.jpg",
+      logoBackground: "/videos/Mulem-logo.mp4",
+      backgroundImage: "/images/Mulem-pic.png",
       buttonText: "سجل الآن!",
       buttonColor: "orange-700",
       message:
@@ -64,13 +60,12 @@ const ActivityContent = () => {
       tag: "مسابقات الBIG O's",
       text: (
         <>
-          <strong>جاهز تتعلم؟</strong> سجل معنا في تدريب الBig Os الآن وش تنتظر!
+          <strong>تعتمد مسابقة الBIG O's</strong> بشكل أساسي على مهارة حل المشكلات، حيث يواجه المتسابق فيها عدة مسائل متفاوتة الصعوبة ومتعددة المجالات (هندسية، رياضية...) قابلة للحل بأي لغة برمجية. آلية معنونة بأسماء الجهات التقنية المتعاونة مع المسابقة.
         </>
       ),
       examples: ["تبي تتعلم؟", "تبي تطور مهاراتك؟", "تبي تتدرب؟", "تبي تجرب؟"],
-      image: "/images/big-o-logo.png",
-      logoBackground: "/images/BIG-Os.png",
-      backgroundImage: "/images/dummy3.jpg",
+      logoBackground: "/videos/BigO-logo.mp4",
+      backgroundImage: "/images/BigO-pic.jpg",
       buttonText: "سجل الآن!",
       buttonColor: "violet-600",
       message:
@@ -120,14 +115,18 @@ const ActivityContent = () => {
               scale: 1.1,
             }}
           >
-            <div
-              className="w-full h-full bg-cover bg-center absolute inset-0"
-              style={{ backgroundImage: `url(${card.logoBackground})` }}
-            ></div>
+            <video
+              className="w-full h-full object-cover absolute inset-0"
+              src={card.logoBackground}
+              autoPlay
+              muted
+              playsInline
+              onEnded={(e) => e.currentTarget.pause()} 
+            />
           </Block>
 
           <Block className="col-span-12 bg-[#360E91] h-[250px] relative">
-            <p className="text-base sm:text-lg leading-relaxed mb-4">
+            <p className="text-base sm:text-lg leading-relaxed mb-4 mt-2">
               {card.text}
             </p>
             <Typewrite examples={card.examples} />
@@ -135,12 +134,13 @@ const ActivityContent = () => {
               <RoundedSlideButton
                 buttonText={card.buttonText}
                 buttonColor={card.buttonColor}
-                onClick={() => handleButtonClick(card)} 
+                onClick={() => handleButtonClick(card)}
               />
             </div>
           </Block>
         </motion.div>
       ))}
+
       {cards.map((card) => (
         <DontHaveActivityNow
           key={card.id}
@@ -185,8 +185,9 @@ const Block = ({ className, children, ...rest }) => {
   );
 };
 
-const LETTER_DELAY = 0.05;
-const SWAP_DELAY_IN_MS = 5500;
+
+const LETTER_DELAY = 0.05; 
+const SWAP_DELAY_IN_MS = 5500; 
 
 const Typewrite = ({ examples }) => {
   const [exampleIndex, setExampleIndex] = useState(0);
@@ -274,7 +275,7 @@ const DontHaveActivityNow = ({ isOpen, setIsOpen, message }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          onClick={() => setIsOpen(null)}
+          onClick={setIsOpen}
           className="bg-slate-900/20 backdrop-blur p-8 fixed inset-0 z-50 grid place-items-center overflow-y-scroll cursor-pointer"
         >
           <motion.div
@@ -295,7 +296,7 @@ const DontHaveActivityNow = ({ isOpen, setIsOpen, message }) => {
               <p className="text-center mb-6">{message}</p>
               <div className="flex gap-2">
                 <button
-                  onClick={() => setIsOpen(null)}
+                  onClick={setIsOpen}
                   className="bg-white hover:opacity-90 transition-opacity text-indigo-600 font-semibold w-full py-2 rounded"
                 >
                   حسنًا

@@ -83,10 +83,16 @@ const SocialsBlock = () => (
       className="col-span-6 md:col-span-3 bg-[#1AC3D0]"
     >
       <a
-        href="#"
+        href="https://x.com/bign_spp?s=21"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <XIcon />
+        <img
+        width="27"
+        viewBox="0 0 72 72"
+        fill="currentColor"
+        src="../images/X logo.png"
+        >
+        </img>
       </a>
     </Block>
     {/* TikTok */}
@@ -98,7 +104,7 @@ const SocialsBlock = () => (
       className="col-span-6 md:col-span-3 bg-[#FF3C10]"
     >
       <a
-        href="#"
+        href="https://www.tiktok.com/@bign__spp?_t=8rBcnuxHtJq&_r=1"
         className="grid h-full place-content-center text-3xl text-white"
       >
         <SiTiktok />
@@ -113,13 +119,13 @@ const SocialsBlock = () => (
       className="col-span-6 md:col-span-3 bg-[#FFD900]"
     >
       <a
-        href="#"
+        href="https://www.linkedin.com/company/bign-spp/"
         className="grid h-full place-content-center text-3xl text-white"
       >
         <FaLinkedinIn />
       </a>
     </Block>
-    {/* Instagram */}
+    {/* Email */}
     <Block
       whileHover={{
         rotate: "2.5deg",
@@ -128,7 +134,7 @@ const SocialsBlock = () => (
       className="col-span-6 md:col-span-3 bg-[#5A5DD9]"
     >
       <a
-        href="#"
+        href="mailto:Bign.ksu.spp@gmail.com"
         className="grid h-full place-content-center text-3xl text-white"
       >
         <FaEnvelope />
@@ -137,26 +143,12 @@ const SocialsBlock = () => (
   </>
 );
 
-const XIcon = () => (
-  <svg
-    width="24"
-    height="24"
-    viewBox="0 0 72 72"
-    fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path d="M61.3625 6.52832H49.8187L36.1888 29.6389L22.5589 6.52832H10.9258L30.9184 36.2094L9.96777 68.6111H21.5115L36.1888 44.7698L50.8662 68.6111H62.5L41.5494 36.2094L61.3625 6.52832Z" />
-  </svg>
-);
-
 const AboutBlock = () => (
   <Block className="col-span-12 text-xl md:text-3xl leading-snug">
     <p>
-      My passion is building cool stuff.{" "}
+      مبادرة Big n{" "}
       <span className="text-zinc-400">
-        I build primarily with React, Tailwind CSS, and Framer Motion. I love
-        this stack so much that I even built a website about it. I've made over
-        a hundred videos on the subject across YouTube and TikTok.
+      هي مبادرة طلابية تهدف الى تنمية وتطوير المهارات التقنية وتوسيع آفاق الطلاب عبر اقامة ،برامج تدريبية،ملتقيات تقنية ،مسابقات برميجة، لصناعة مجتمع تقني واعد.
       </span>
     </p>
   </Block>

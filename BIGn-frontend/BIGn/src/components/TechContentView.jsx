@@ -11,21 +11,21 @@ const TechContentView = () => {
       <div className="mx-auto flex w-fit flex-wrap justify-center gap-4">
         <Card
           Title="الذكاء الاصطناعي"
-          description="For individuals who want to understand why their landing pages aren't working"
+          description="اكتشف كيف يُغيّر الذكاء الاصطناعي شكل حياتنا اليومية ويقود المستقبل بحلول مبتكرة وتطبيقات ذكية."
           cta="المزيد"
           background="bg-[#5A5DD9]"
           BGComponent={BackgroundA}
         />
         <Card
           Title="علم البيانات"
-          description="For mid-sized companies who are serious about boosting their revenue by 30%"
+          description="تعرف على علم البيانات، وكيف تكشف البيانات عن أفكار مبتكرة تقود الابتكار وتغير الطريقة التي نفهم بها العالم."
           cta="المزيد"
           background="bg-[#FF3C10]"
           BGComponent={BackgroundB}
         />
         <Card
           Title="التكنولوجيا المالية"
-          description="For large enterprises looking to outsource their conversion rate optimization"
+          description="اكتشف كيف تساهم التكنولوجيا في تطوير عالم المال، وتقديم حلول مالية مبتكرة تجعل المعاملات أسهل وأسرع."
           cta="المزيد"
           background="bg-[#1AC3D0]"
           BGComponent={BackgroundC}
