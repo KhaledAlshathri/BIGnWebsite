@@ -90,7 +90,7 @@ const NavMenu = ({ isOpen }) => {
       variants={menuVariants}
       initial="closed"
       animate={isOpen ? 'open' : 'closed'}
-      className="absolute left-0 right-0 top-full origin-top flex flex-col gap-4 bg-white p-4 shadow-lg"
+      className="absolute left-0 right-0 top-full origin-top flex flex-col gap-4 bg-white p-4 shadow-lg items-end"
     >
       <MenuLink text="الرئيسية" href="/" />
       <MenuLink text="من نحن" href="/about" />
@@ -100,6 +100,7 @@ const NavMenu = ({ isOpen }) => {
     </motion.div>
   )
 }
+
 
 const MenuLink = ({ text, href }) => {
   return (

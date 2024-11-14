@@ -1,13 +1,5 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  SiAtlassian,
-  SiDribbble,
-  SiGrubhub,
-  SiKaggle,
-  SiSlack,
-  SiNike,
-} from "react-icons/si";
 
 const Partners = () => {
   const [selected, setSelected] = useState(0);
@@ -17,9 +9,7 @@ const Partners = () => {
       <div className="p-4">
         <h3 className="md:text-5xl text-4xl text-center font-semibold">شركاءنا</h3>
         <p className="text-slate-500 text-center my-4">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
-          commodi sint, similique cupiditate possimus suscipit delectus illum
-          eos iure magnam!
+         تعرفوا على شركاء النجاح!
         </p>
         <SelectBtns
           numTracks={testimonials.length}
@@ -119,7 +109,7 @@ const Card = ({
 
   const zIndex = totalCards - Math.abs(position - selected);
 
-  const colors = ["#360E91", "#1AC3D0", "#5A5DD9", "#FF3C10"];
+  const colors = ["#1AC3D0", "#5A5DD9", "#FF3C10"];
 
   const backgroundColor = colors[position % colors.length];
   const textColor = "white";
@@ -147,10 +137,10 @@ const Card = ({
         ease: "easeOut",
       }}
       onClick={() => setSelected(position)}
-      className="absolute top-0 h-full p-8 lg:p-12 cursor-pointer rounded-t-md flex flex-col justify-between shadow-lg"
+      className="absolute top-0 h-full p-8 cursor-pointer rounded-t-md flex flex-col justify-between shadow-lg"
     >
-      <Icon className="text-7xl mx-auto" />
-      <p className="text-lg lg:text-xl font-light italic my-8">
+      <img src={Icon} className="mx-auto w-auto h-24" />
+      <p className="text-sm text-justify lg:text-md font-light italic mb-8">
         "{description}"
       </p>
       <div>
@@ -165,45 +155,24 @@ export default Partners;
 
 const testimonials = [
   {
-    Icon: SiNike,
+    Icon: "/images/samsung-logo.png",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
     name: "Jane Dodson",
     title: "Marketing Director, Nike",
   },
   {
-    Icon: SiAtlassian,
+    Icon: "/images/huawei-logo.png",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
     name: "Johnathan Rodriguez",
     title: "UX Research, Atlassian",
   },
   {
-    Icon: SiDribbble,
+    Icon: "/images/shaguf-bites-logo.png",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
-    name: "Phil Heath",
-    title: "Staff Engineer, Dribbble",
-  },
-  {
-    Icon: SiGrubhub,
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
-    name: "Andrea Beck",
-    title: "Marketing Manager, GrubHub",
-  },
-  {
-    Icon: SiKaggle,
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
-    name: "Daniel Henderson",
-    title: "Engineering Manager, Kaggle",
-  },
-  {
-    Icon: SiSlack,
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
-    name: "Anderson Lima",
-    title: "Product Manager, Slack",
+      "اهلًا ! 👋 نحن بايتس! في بايتس نحوّل طرق التعلم التقليدية الى تجارب ذكية وتفاعلية بعوامل التلعيب الممتعة لأكثر من مليون طالب من 70 دولة حول العالم 🌍.بدأنا من الرياض، وفي الرياض راح نلقاكم في حدث “BIGn”! برؤيتنا المشتركة، نهدف لتمكين الطلاب الشغوفين بالتقنية والتعليم. متحمسين جدًا للقائكم في ‏“BIGn” ومشاركتكم  أخبارنا وتحديثاتنا الرهيبة!🚀",
+    name: "إبراهيم الكثيري",
+    title: "المؤسس المشارك ومدير النمو",
   },
 ];
