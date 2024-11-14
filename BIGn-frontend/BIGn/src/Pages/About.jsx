@@ -1,6 +1,6 @@
 import React from 'react';
 import AboutUs from '../components/AboutUs';
-import VisionAndMessage from '../components/VisionAndMEssage';
+import VisionAndMessage from '../components/VisionAndMessage';
 import CountUpStats from '../components/CountUpStats';
 import Principles from '../components/Principles';
 
