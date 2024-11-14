@@ -62,7 +62,7 @@ const Post = ({ imgUrl, title, description, size, linkedinUrl }) => {
 
   return (
     <div
-      className="relative shrink-0 cursor-pointer justify-items-center transition-transform hover:-translate-y-1"
+      className="flex flex-col items-center relative shrink-0 cursor-pointer justify-items-center transition-transform hover:-translate-y-1"
       style={{
         width: cardWidth,
       }}
