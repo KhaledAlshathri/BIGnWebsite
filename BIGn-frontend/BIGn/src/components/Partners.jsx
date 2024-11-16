@@ -155,11 +155,9 @@ export default Partners;
 
 const testimonials = [
   {
-    Icon: "/images/samsung-logo.png",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
-    name: "Jane Dodson",
-    title: "Marketing Director, Nike",
+    Icon: "/images/huawei-logo.png",
+    description: "برزت شركة هواوي كقوة دافعة في الملتقى التكنولوجي، حيث قدمت أحدث ابتكاراتها في مجال الذكاء الاصطناعي. ، سعت الشركة إلى تعزيز التعاون في مجال البحث والتطوير وتطوير حلول مبتكرة تلبي احتياجات السوق. كما أبرزت هواوي التزامها بالمسؤولية الاجتماعية من خلال تقديم حلول تقنية مستدامة. من المتوقع أن تساهم هذه المشاركة في تسريع وتيرة التحول الرقمي في المنطقة، وتعزيز مكانة هواوي كشركة رائدة في مجال التكنولوجيا",
+    name: "هواوي",
   },
   {
     Icon: "/images/huawei-logo.png",

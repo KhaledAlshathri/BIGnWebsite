@@ -60,8 +60,7 @@ const ActivityContent = () => {
       tag: "مسابقات الBIG O's",
       text: (
         <>
-          <strong>تعتمد مسابقة الBIG O's</strong> بشكل أساسي على مهارة حل المشكلات، حيث يواجه المتسابق فيها عدة مسائل متفاوتة الصعوبة ومتعددة المجالات (هندسية، رياضية...) قابلة للحل بأي لغة برمجية. آلية معنونة بأسماء الجهات التقنية المتعاونة مع المسابقة.
-        </>
+          <strong>تعتمد مسابقة الBIG O's</strong> بشكل أساسي على مهارة حل المشكلات، حيث يواجه المتسابق فيها عدة مسائل متفاوتة الصعوبة ومتعددة المجالات (هندسية، رياضية...) قابلة للحل بأي لغة برمجية.  </>
       ),
       examples: ["تبي تتعلم؟", "تبي تطور مهاراتك؟", "تبي تتدرب؟", "تبي تجرب؟"],
       logoBackground: "/videos/BigO-logo.mp4",
@@ -109,7 +108,7 @@ const ActivityContent = () => {
           </Block>
 
           <Block
-            className="col-span-5 sm:col-span-4 bg-zinc-800 aspect-square relative overflow-hidden"
+            className="col-span-5 sm:col-span-4 aspect-square relative overflow-hidden"
             whileHover={{
               rotate: "-2.5deg",
               scale: 1.1,
@@ -125,12 +124,12 @@ const ActivityContent = () => {
             />
           </Block>
 
-          <Block className="col-span-12 bg-[#360E91] h-[250px] relative">
+          <Block className="col-span-12 bg-[#360E91] h-auto relative">
             <p className="text-base sm:text-lg leading-relaxed mb-4 mt-2">
               {card.text}
             </p>
             <Typewrite examples={card.examples} />
-            <div className="absolute bottom-4 right-4">
+            <div className="pt-5">
               <RoundedSlideButton
                 buttonText={card.buttonText}
                 buttonColor={card.buttonColor}
