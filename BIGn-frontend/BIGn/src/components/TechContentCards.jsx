@@ -23,6 +23,10 @@ const cardContents = [
     id: 2,
     imageUrl: "/images/Publication2.png",
   },
+  {
+    id: 3,
+    imageUrl: "/images/Publication3.png",
+  },
 ];
 
 const TechContentCards = () => {
@@ -34,7 +38,7 @@ const TechContentCards = () => {
       style={{
         backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke-width='2' stroke='%23d4d4d4'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e")`,
       }}
-      className="relative h-full min-h-screen bg-neutral-100 px-20 pt-32 pb-20"
+      className="relative h-full min-h-screen bg-neutral-100 sm:px-20 py-32"
     >
       <h1 className="mb-16 text-center text-4xl md:text-5xl font-bold text-gray-800">
         المنشورات التقنية

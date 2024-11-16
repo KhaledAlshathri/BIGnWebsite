@@ -52,7 +52,7 @@ const Content = () => {
           delay: 0.25,
           ease: "easeInOut",
         }}
-        className="purple_color mb-3 text-center text-3xl font-bold leading-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight lg:leading-tight"
+        className="purple_color mb-3 text-center text-2xl font-bold leading-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight lg:leading-tight"
       >
         Big n نحو مستقبل تقني أفضل
       </motion.h1>
