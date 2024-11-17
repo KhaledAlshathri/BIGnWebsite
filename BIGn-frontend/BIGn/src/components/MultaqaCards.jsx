@@ -5,7 +5,7 @@ const MultaqaCards = () => {
   const displayItems = items.slice(0, 3);
 
   return (
-    <section className="p-4 py-44">
+    <section className="p-4 px-10 py-44">
       <div className="mx-auto max-w-6xl">
         <p className="mb-16 text-3xl sm:text-5xl text-center font-semibold">
           احجز تذكرتك واستمتع بالمعرض التقني!
@@ -37,7 +37,7 @@ const MultaqaCards = () => {
 const Card = ({ url }) => {
   return (
     <div
-      className="relative rounded-2xl bg-white transition-all hover:scale-[1.015] hover:shadow-xl overflow-hidden w-full"
+      className="relative rounded-2xl bg-white transition-all hover:scale-[1.030] hover:shadow-xl overflow-hidden w-full"
     >
       <div
         className="w-full aspect-square bg-cover bg-center"

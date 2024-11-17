@@ -11,22 +11,22 @@ const CountUpStats = () => {
 
       <div className="flex flex-col items-center justify-center sm:flex-row">
         <Stat
-          num={12}
+          num={1}
+          decimals={1}
           suffix="K+"
           subheading="طالب"
         />
         <div className="h-[1px] w-12 bg-indigo-200 sm:h-12 sm:w-[1px]" />
         <Stat
-          num={8}
-          decimals={1}
+          num={170}
           suffix="K+"
           subheading="مستفيد"
         />
         <div className="h-[1px] w-12 bg-indigo-200 sm:h-12 sm:w-[1px]" />
         <Stat
-          num={3.4}
-          suffix="K+"
-          subheading="خريج"
+          num={15}
+          suffix="+"
+          subheading="تعاون مع جهات"
         />
       </div>
     </div>
@@ -52,7 +52,7 @@ const Stat = ({ num, suffix, decimals = 0, subheading }) => {
 
   return (
     <div className="flex w-72 flex-col items-center py-8 sm:py-0">
-      <p className="mb-2 text-center md:text-7xl text-5xl font-semibold sm:text-6xl">
+      <p className="mb-2 text-center md:text-6xl text-5xl font-semibold sm:text-6xl">
         <span ref={ref}></span>
         {suffix}
       </p>
