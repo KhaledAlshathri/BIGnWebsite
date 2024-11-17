@@ -11,14 +11,14 @@ const ActivitiesCards = () => {
       </div>
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-8 sm:flex-row">
         <Card
-          title="برنامج مُلم"
-          href="/activities"
-          bg={"/videos/Mulem-card-logo.mp4"}
-        />
-        <Card
           title="الملتقى التقني"
           href="/activities"
           bg={"/videos/Multaqa-card-logo.mp4"}
+        />
+        <Card
+          title="برنامج مُلم"
+          href="/activities"
+          bg={"/videos/Mulem-card-logo.mp4"}
         />
         <Card
           title="مسابقات الBIG O"
