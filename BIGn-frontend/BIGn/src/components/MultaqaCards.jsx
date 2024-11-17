@@ -73,8 +73,8 @@ export default MultaqaCards;
 const items = [
   {
     id: 1,
-    url: "/images/multaqa-ticket.png",
-    title: "تذكرة حضور الملتقى يوم الثلاثاء",
+    url: "/images/multaqa-ticket.svg",
+    title: "تذكرة حضور الملتقى التقني يوم الثلاثاء",
     buttonLink: "https://forms.gle/TDt9GhxdVHwdEA7W7",
   },
   {
