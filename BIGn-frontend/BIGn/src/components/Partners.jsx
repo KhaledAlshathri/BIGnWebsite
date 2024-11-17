@@ -160,13 +160,6 @@ const testimonials = [
     name: "هواوي",
   },
   {
-    Icon: "/images/huawei-logo.png",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
-    name: "Johnathan Rodriguez",
-    title: "UX Research, Atlassian",
-  },
-  {
     Icon: "/images/shaguf-bites-logo.png",
     description:
       "اهلًا ! 👋 نحن بايتس! في بايتس نحوّل طرق التعلم التقليدية الى تجارب ذكية وتفاعلية بعوامل التلعيب الممتعة لأكثر من مليون طالب من 70 دولة حول العالم 🌍.بدأنا من الرياض، وفي الرياض راح نلقاكم في حدث “BIGn”! برؤيتنا المشتركة، نهدف لتمكين الطلاب الشغوفين بالتقنية والتعليم. متحمسين جدًا للقائكم في ‏“BIGn” ومشاركتكم  أخبارنا وتحديثاتنا الرهيبة!🚀",
