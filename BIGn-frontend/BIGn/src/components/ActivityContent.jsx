@@ -29,7 +29,7 @@ const ActivityContent = () => {
       buttonColor: "cyan-400",
       message:
         "خلك قريب وتابعنا على مواقع التواصل الاجتماعي لتعرف عن أكثر الملتقى التقني!",
-      activityOpen: true, // Activity is open
+      activityOpen: false, // Activity is closed
       activityLink: "/Multaqa", // Links to Multaqa Page when the activity is open
     },
     {
