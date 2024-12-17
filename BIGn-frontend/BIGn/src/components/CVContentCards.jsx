@@ -23,6 +23,10 @@ const cardContents = [
     id: 2,
     imageUrl: "/images/CV2.png",
   },
+  {
+    id: 3,
+    imageUrl: "/images/CV3.jpg",
+  },
 ];
 
 const CVContentCards = () => {

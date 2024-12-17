@@ -27,6 +27,10 @@ const cardContents = [
     id: 3,
     imageUrl: "/images/Publication3.png",
   },
+  {
+    id: 4,
+    imageUrl: "/images/Publication4.png",
+  },
 ];
 
 const TechContentCards = () => {
