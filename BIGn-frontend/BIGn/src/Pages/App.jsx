@@ -12,8 +12,8 @@ function App() {
     <>
     <GridHero />
     <CountUpStats />
-    <AboutUs />
     <ActivitiesCards />
+    <AboutUs />
     <Partners />
     <TechContentView />
     </>

@@ -14,21 +14,24 @@ const ActivityContent = () => {
       tag: "مسابقات BIG O's",
       text: (
         <>
-          <strong>تعتمد مسابقة الBIG O's</strong> بشكل أساسي على مهارة حل المشكلات، حيث يواجه المتسابق فيها عدة مسائل متفاوتة الصعوبة ومتعددة المجالات (هندسية، رياضية...) قابلة للحل بأي لغة برمجية.  
+          <strong>تعتمد مسابقة ال <span className="text-yellow-400">BIG O's</span></strong> بشكل أساسي على مهارة حل المشكلات، حيث يواجه المتسابق فيها عدة مسائل متفاوتة الصعوبة ومتعددة المجالات (هندسية، رياضية...) قابلة للحل بأي لغة برمجية.  
 
+          <strong>
           <p>المدة : 3-4 مايو</p>
           <p>المكان : بهو جامعة الملك سعود - قاعة الدرعية</p>
+          </strong>
         </>
       ),
       examples: ["تبي تتعلم؟", "تبي تطور مهاراتك؟", "تبي تتدرب؟", "تبي تجرب؟"],
-      logoBackground: "/videos/BigO-logo.mp4",
+      logoBackground: "/images/BigO_icon.jpg",
       backgroundImage: "/images/BigO-pic.jpg",
       buttonText: "سجل الآن!",
       buttonColor: "violet-600",
       message:
         "خلك قريب وتابعنا على مواقع التواصل الاجتماعي لتعرف أكثر عن تدريب الBIG O's!",
-      activityOpen: true, // Activity is closed
+      activityOpen: false, // Activity is closed
       activityLink: "/BigOs", // Links to BigOs Page when the activity is open
+      image: true,
     },
     {
       id: 2,
@@ -52,6 +55,7 @@ const ActivityContent = () => {
         "خلك قريب وتابعنا على مواقع التواصل الاجتماعي لتعرف عن أكثر الملتقى التقني!",
       activityOpen: false, // Activity is closed
       activityLink: "/Multaqa", // Links to Multaqa Page when the activity is open
+      image: false,
     },
     {
       id: 3,
@@ -75,6 +79,7 @@ const ActivityContent = () => {
         "خلك قريب وتابعنا على مواقع التواصل الاجتماعي لتعرف أكثر عن برنامج مُلم!",
       activityOpen: false, // Activity is closed
       activityLink: "/Mulm", // Links to Mulem Page when the activity is open
+      image: false,
     },
     
   ];
@@ -99,7 +104,7 @@ const ActivityContent = () => {
           }}
           className="mx-auto grid max-w-4xl grid-flow-dense grid-cols-12 gap-4 my-20 py-10"
         >
-          <Block className="col-span-12 p-5 flex items-center justify-center bg-[#360E91]">
+          <Block className="col-span-12 p-5 flex items-center justify-center bg-[#001430]">
             <h2 className="text-2xl sm:text-3xl font-bold text-center">
               {card.tag}
             </h2>
@@ -119,17 +124,22 @@ const ActivityContent = () => {
               scale: 1.1,
             }}
           >
-            <video
+            {!card.image && <video
               className="w-full h-full object-cover absolute inset-0"
               src={card.logoBackground}
               autoPlay
               muted
               playsInline
               onEnded={(e) => e.currentTarget.pause()} 
-            />
+            />}
+
+            {card.image && <img
+              className="w-full h-full object-cover absolute inset-0"
+              src={card.logoBackground}
+            />}
           </Block>
 
-          <Block className="col-span-12 bg-[#360E91] h-auto relative">
+          <Block className="col-span-12 bg-[#001430] h-auto relative">
             <p className="text-base sm:text-lg leading-relaxed mb-4 mt-2">
               {card.text}
             </p>

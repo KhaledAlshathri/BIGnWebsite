@@ -1,6 +1,7 @@
 import React from "react";
 import { FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si";
+import WhatsappIcon from "./WhatsappIcon";
 
 const Footer = () => {
   return (
@@ -60,6 +61,7 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} جميع الحقوق محفوظة لBig n.
         </p>
       </div>
+      <WhatsappIcon />
     </footer>
   );
 };

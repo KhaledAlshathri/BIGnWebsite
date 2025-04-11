@@ -15,7 +15,7 @@ function BigOForm() {
 
   return (
     <section className="w-full py-32 px-4 bg-gray-50">
-      <div className="max-w-4xl mx-auto bg-white p-6 rounded shadow">
+      <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow">
 
         
         <h1 className="text-3xl font-bold text-center mb-6">
