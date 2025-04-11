@@ -8,6 +8,7 @@ import Members from './Pages/Members.jsx';
 import FlipNavWrapper from './components/FlipNavWrapper'
 import Footer from './components/Footer'
 import Multaqa from './Pages/Multaqa.jsx'
+import BigO from './Pages/BigO.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
   {path: "/Content", element: <Content />},
   {path: "/Members", element: <Members />},
   {path: "/Multaqa", element: <Multaqa />},
+  {path: "/BigOs", element: <BigO />},
 ])
 
 createRoot(document.getElementById('root')).render(

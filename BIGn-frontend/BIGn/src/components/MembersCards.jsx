@@ -98,12 +98,10 @@ const largeCards = [
 const mediumCards = [
   { id: 4, imgUrl: "/images/boy-icon.png", title: "طلال التميمي", description: "المسؤول الإداري", linkedinUrl: "http://linkedin.com/in/talal-altamimi-7a5561267" },
   { id: 5, imgUrl: "/images/boy-icon.png", title: "خالد الشثري", description: "قائد اللجنة العلمية التقنية", linkedinUrl: "https://www.linkedin.com/in/khaled-alshathri?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BJPhwsZzBTYWvkv0eRrHmmg%3D%3D" },
-  { id: 6, imgUrl: "/images/girl-icon.png", title: "رهف التويجري", description: "قائدة اللجنة التنفيذية", linkedinUrl: "https://www.linkedin.com/in/rahaf-altuwijri-92425227b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
-  { id: 7, imgUrl: "/images/boy-icon.png", title: "فهد الجدعان", description: "قائد لجنة الموارد البشرية", linkedinUrl: "https://www.linkedin.com/in/fahad-al-jadaan-142bba283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
+  { id: 6, imgUrl: "/images/girl-icon.png", title: "رغد العسيري", description: "قائدة اللجنة التنفيذية", linkedinUrl: "https://www.linkedin.com/in/raghad-alassiri-155277221?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
+  { id: 7, imgUrl: "/images/boy-icon.png", title: "حنين المطيري", description: "قائد لجنة الموارد البشرية", linkedinUrl: "https://www.linkedin.com/in/haneen-almutairi-b3b01532b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
   { id: 8, imgUrl: "/images/girl-icon.png", title: "رزان المقوشي", description: " قائدة لجنة العلاقات العامة ", linkedinUrl: "https://www.linkedin.com/in/razan-almuqwishi/" },
-  { id: 9, imgUrl: "/images/girl-icon.png", title: "سلطانه العنقري", description: "قائدة اللجنة الإعلامية", linkedinUrl: "https://www.linkedin.com/in/sultanah-alangari-97b0b3221?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
-  { id: 10, imgUrl: "/images/boy-icon.png", title: "عجلان العجلان", description: "مدير مشروع", linkedinUrl: "https://www.linkedin.com/in/ajlan-alajlan-064297292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
-  { id: 11, imgUrl: "/images/boy-icon.png", title: "محمد العساكر", description: "مدير مشروع", linkedinUrl: "https://www.linkedin.com/in/mohammed-alasaker?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
+  { id: 9, imgUrl: "/images/girl-icon.png", title: "رغد الهزاني ", description: "قائدة اللجنة الإعلامية", linkedinUrl: "https://www.linkedin.com/in/raghad-alhazzani-391406281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
 ];
 
 const smallCards = [

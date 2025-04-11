@@ -8,22 +8,22 @@ const Footer = () => {
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
         {/* Social Media Icons */}
         <div className="flex space-x-4 space-x-reverse mb-4 md:mb-0">
-          <a href="https://x.com/bign_spp?s=21" aria-label="X" className="hover:text-gray-400">
+          <a href="https://x.com/KsuCPC" aria-label="X" className="hover:text-gray-400">
             <XIcon size={20} />
           </a>
-          <a href="https://www.tiktok.com/@bign__spp?_t=8rBcnuxHtJq&_r=1" aria-label="تيك توك" className="hover:text-gray-400">
+          <a href="https://www.tiktok.com/@cpc.ksu?is_from_webapp=1&sender_device=pc" aria-label="تيك توك" className="hover:text-gray-400">
             <SiTiktok size={20} />
           </a>
-          <a href="https://www.linkedin.com/company/bign-spp/" aria-label="لينكدإن" className="hover:text-gray-400">
+          {/* <a href="https://www.linkedin.com/company/bign-spp/" aria-label="لينكدإن" className="hover:text-gray-400">
             <FaLinkedinIn size={20} />
-          </a>
-          <a href="mailto:Bign.ksu.spp@gmail.com" aria-label="الإيميل" className="hover:text-gray-400">
+          </a> */}
+          <a href="mailto:ksucpc@gmail.com" aria-label="الإيميل" className="hover:text-gray-400">
             <FaEnvelope size={20} />
           </a>
         </div>
 
         {/* Navigation Links */}
-        <div className="flex flex-row space-x-6 space-x-reverse text-center text-right mb-4 text-sm md:mb-0">
+        <div className="flex flex-row space-x-6 space-x-reverse text-right mb-4 text-sm md:mb-0">
           <a href="/" className="hover:text-gray-400 md:mr-6">
           الرئيسية
           </a>

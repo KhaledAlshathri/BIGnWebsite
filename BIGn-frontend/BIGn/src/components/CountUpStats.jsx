@@ -4,7 +4,7 @@ import { animate, useInView } from "framer-motion";
 const CountUpStats = () => {
   return (
     <div className="mx-auto max-w-3xl px-4 pb-10 pt-20 md:py-24">
-      <h2 className="mb-8 text-center text-base text-indigo-900 sm:text-2xl text-lg md:mb-16">
+      <h2 className="mb-8 text-center text-indigo-900 sm:text-2xl text-lg md:mb-16">
         إحصائيات نفخر بها في مبادرة
         <span className="text-[#FF3C10]"> BIG n</span>
       </h2>

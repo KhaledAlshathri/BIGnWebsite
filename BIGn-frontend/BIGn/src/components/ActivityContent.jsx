@@ -11,6 +11,27 @@ const ActivityContent = () => {
   const cards = [
     {
       id: 1,
+      tag: "مسابقات BIG O's",
+      text: (
+        <>
+          <strong>تعتمد مسابقة الBIG O's</strong> بشكل أساسي على مهارة حل المشكلات، حيث يواجه المتسابق فيها عدة مسائل متفاوتة الصعوبة ومتعددة المجالات (هندسية، رياضية...) قابلة للحل بأي لغة برمجية.  
+
+          <p>المدة : 3-4 مايو</p>
+          <p>المكان : بهو جامعة الملك سعود - قاعة الدرعية</p>
+        </>
+      ),
+      examples: ["تبي تتعلم؟", "تبي تطور مهاراتك؟", "تبي تتدرب؟", "تبي تجرب؟"],
+      logoBackground: "/videos/BigO-logo.mp4",
+      backgroundImage: "/images/BigO-pic.jpg",
+      buttonText: "سجل الآن!",
+      buttonColor: "violet-600",
+      message:
+        "خلك قريب وتابعنا على مواقع التواصل الاجتماعي لتعرف أكثر عن تدريب الBIG O's!",
+      activityOpen: true, // Activity is closed
+      activityLink: "/BigOs", // Links to BigOs Page when the activity is open
+    },
+    {
+      id: 2,
       tag: "ملتقى BIG n التقني ",
       text: (
         <>
@@ -33,7 +54,7 @@ const ActivityContent = () => {
       activityLink: "/Multaqa", // Links to Multaqa Page when the activity is open
     },
     {
-      id: 2,
+      id: 3,
       tag: "برنامج مُلم",
       text: (
         <>
@@ -55,23 +76,7 @@ const ActivityContent = () => {
       activityOpen: false, // Activity is closed
       activityLink: "/Mulm", // Links to Mulem Page when the activity is open
     },
-    {
-      id: 3,
-      tag: "مسابقات BIG O's",
-      text: (
-        <>
-          <strong>تعتمد مسابقة الBIG O's</strong> بشكل أساسي على مهارة حل المشكلات، حيث يواجه المتسابق فيها عدة مسائل متفاوتة الصعوبة ومتعددة المجالات (هندسية، رياضية...) قابلة للحل بأي لغة برمجية.  </>
-      ),
-      examples: ["تبي تتعلم؟", "تبي تطور مهاراتك؟", "تبي تتدرب؟", "تبي تجرب؟"],
-      logoBackground: "/videos/BigO-logo.mp4",
-      backgroundImage: "/images/BigO-pic.jpg",
-      buttonText: "سجل الآن!",
-      buttonColor: "violet-600",
-      message:
-        "خلك قريب وتابعنا على مواقع التواصل الاجتماعي لتعرف أكثر عن تدريب الBIG O's!",
-      activityOpen: false, // Activity is closed
-      activityLink: "/BigOs", // Links to BigOs Page when the activity is open
-    },
+    
   ];
 
   const handleButtonClick = (card) => {
