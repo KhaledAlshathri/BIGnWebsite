@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
-
+import IframeResizer from '@iframe-resizer/react'
 function BigOForm() {
   // State for additional team members (0 to 2) – total members become 1 + additionalMembers.
   const [additionalMembers, setAdditionalMembers] = useState(0);
@@ -12,10 +12,9 @@ function BigOForm() {
       setAdditionalMembers((prev) => prev + 1);
     }
   };
-
   return (
     <section className="w-full py-32 px-4 bg-gray-50">
-      <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow">
+      <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow box-border">
 
         
         <h1 className="text-3xl font-bold text-center mb-6">
@@ -37,8 +36,46 @@ function BigOForm() {
             ٤- يلتزم جميع المتقدمين بحضور يوم المسابقة التجريبية ويوم المسابقة الفعلية (على الرغم من أن حضور المعسكر التدريبي ليس شرطاً).
           </p>
         </div>
+<div className="w-full"> {/* Removed the h-full class which might be limiting height */}
+  <IframeResizer
+    src="https://docs.google.com/forms/d/e/1FAIpQLSdDRACrnjWgdsy32cdGH9nMdtjI9w9HHVTC2QywoUhRSf2ZBA/viewform?embedded=true"
+    style={{ 
+      width: '1px', 
+      minWidth: '100%', 
+      border: 'none',
+      minHeight: '800px' /* Add minimum height to ensure content visibility */
+    }}
+    heightCalculationMethod="lowestElement" /* Better for complex forms */
+    scrolling={true} /* Allow scrolling if needed */
+    checkOrigin={false}
+    inPageLinks
+    autoResize={true}
+    sizeWidth={true}
+    onMessage={(data) => {
+      if (data.message === 'resize') {
+        console.log('Form content changed, resizing...');
+      }
+    }}
+    warningTimeout={0}
+    onResized={(data) => console.log('Form resized:', data.height)}
+    messagingOptions={{ postMessageTarget: window.parent }}
+  />
+</div>
+        
+      </div>
+    </section>
+  );
+}
 
-        <form className="space-y-6">
+export default BigOForm;
+
+
+
+
+
+const pastForm = () => {
+  return (
+    <form className="space-y-6">
           {/* 1. الاسم الرباعي باللغة العربية */}
           <div>
             <label className="block text-sm font-medium mb-1">
@@ -376,9 +413,5 @@ function BigOForm() {
             تسجيل
           </button>
         </form>
-      </div>
-    </section>
   );
 }
-
-export default BigOForm;
