@@ -11,10 +11,10 @@ const ActivityContent = () => {
   const cards = [
     {
       id: 1,
-      tag: "مسابقات BIG O's",
+      tag: "مسابقة BIG O's",
       text: (
         <>
-          <strong>تعتمد مسابقة ال <span className="text-yellow-400">BIG O's</span></strong> بشكل أساسي على مهارة حل المشكلات، حيث يواجه المتسابق فيها عدة مسائل متفاوتة الصعوبة ومتعددة المجالات (هندسية، رياضية...) قابلة للحل بأي لغة برمجية.  
+          <strong>تعتمد مسابقة  <span className="text-yellow-400">BIG O's</span></strong> بشكل أساسي على مهارة حل المشكلات، حيث يواجه المتسابق فيها عدة مسائل متفاوتة الصعوبة ومتعددة المجالات (هندسية، رياضية...) قابلة للحل بأي لغة برمجية.  
 
           <strong>
           <p>المدة : 3-4 مايو</p>
@@ -28,7 +28,7 @@ const ActivityContent = () => {
       buttonText: "سجل الآن!",
       buttonColor: "violet-600",
       message:
-        "خلك قريب وتابعنا على مواقع التواصل الاجتماعي لتعرف أكثر عن تدريب الBIG O's!",
+        "خلك قريب وتابعنا على مواقع التواصل الاجتماعي لتعرف أكثر عن تدريب BIG O's!",
       activityOpen: false, // Activity is closed
       activityLink: "/BigOs", // Links to BigOs Page when the activity is open
       image: true,
