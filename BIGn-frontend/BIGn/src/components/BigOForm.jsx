@@ -39,7 +39,7 @@ function BigOForm() {
            <strong  className="text-base"> ٥-</strong> أولوية القبول للفرق المكونة من ٣ مشاركين من نفس الجامعة.
           </p>
           <p>
-          <strong  className="text-base">٦-</strong> في حال عدم توفر الفريق، يمكنك الانضمام لمجتمع الواتساب <a href="https://chat.whatsapp.com/KrhfCLfZXkfKLQX3pOXmz4" className="text-[#001430] font-bold">(رابط المجتمع)</a> لتكوين الفريق الخاص بك، أيضا يمكنك التقديم في النموذج بشكل فردي دون فريق باختيار عضو مشارك فردي    
+          <strong  className="text-base">٦-</strong> في حال عدم توفر الفريق، يمكنك الانضمام لمجتمع الواتساب <a href="https://chat.whatsapp.com/KrhfCLfZXkfKLQX3pOXmz4" className="text-blue-600 underline underline-offset-4 font-bold">(رابط المجتمع)</a> لتكوين الفريق الخاص بك، أيضا يمكنك التقديم في النموذج بشكل فردي دون فريق باختيار عضو مشارك فردي    
           </p>
           <p>
           <strong  className="text-base">٧-</strong> هذا النموذج للتسجيل بمسابقة BIG O's فقط، ولا يشمل التسجيل للمعسكر التدريبي حيث يتواجد له نموذج آخر 
