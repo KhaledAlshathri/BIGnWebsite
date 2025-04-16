@@ -29,7 +29,7 @@ const ActivityContent = () => {
       buttonColor: "violet-600",
       message:
         "خلك قريب وتابعنا على مواقع التواصل الاجتماعي لتعرف أكثر عن تدريب BIG O's!",
-      activityOpen: false, // Activity is closed
+      activityOpen: true, // Activity is opened
       activityLink: "/BigOs", // Links to BigOs Page when the activity is open
       image: true,
     },

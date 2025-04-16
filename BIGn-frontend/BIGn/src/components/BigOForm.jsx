@@ -17,23 +17,35 @@ function BigOForm() {
       <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow box-border">
 
         
-        <h1 className="text-3xl font-bold text-center mb-6">
-          سجل في مسابقة Big O's الأن!
+        <h1 className="sm:text-3xl text-2xl font-bold text-center mb-6">
+          سجل في مسابقة Big O's الآن!
         </h1>
 
         {/* Instructions Block */}
         <div className="bg-gray-100 border border-gray-300 p-4 rounded mb-6 text-sm text-gray-700">
           <p className="mb-1">
-            ١- يجب أن يكون المتقدم طالباً جامعياً سواء كان دبلوم، بكالوريس أو ماجستير بغض النظر عن التخصص.
+           <strong  className="text-base">١-</strong> يجب أن يكون المتقدم طالباً جامعياً سواء كان دبلوم، بكالوريس أو ماجستير بغض النظر عن التخصص.
           </p>
           <p className="mb-1">
-            ٢- يتكون كل فريق من ٣ أعضاء فقط (لا أقل ولا أكثر).
+            <strong  className="text-base">٢-</strong> يتكون كل فريق من ٣ أعضاء فقط (لا أقل ولا أكثر) قائد الفريق وعضوين مشاركين.
           </p>
           <p className="mb-1">
-            ٣- يجب أن يكون أعضاء الفريق من نفس الجامعة (لا يشترط نفس التخصص أو المستوى الدراسي).
+            <strong  className="text-base">٣-</strong> يجب أن يكون أعضاء الفريق من نفس الجامعة (لا يشترط نفس التخصص أو المستوى الدراسي).
           </p>
           <p>
-            ٤- يلتزم جميع المتقدمين بحضور يوم المسابقة التجريبية ويوم المسابقة الفعلية (على الرغم من أن حضور المعسكر التدريبي ليس شرطاً).
+            <strong  className="text-base">٤-</strong> يلتزم جميع المتقدمين بحضور يوم المسابقة التجريبية ويوم المسابقة الفعلية (على الرغم من أن حضور المعسكر التدريبي ليس شرطاً).
+          </p>
+          <p> 
+           <strong  className="text-base"> ٥-</strong> أولوية القبول للفرق المكونة من ٣ مشاركين من نفس الجامعة.
+          </p>
+          <p>
+          <strong  className="text-base">٦-</strong> في حال عدم توفر الفريق، يمكنك الانضمام لمجتمع الواتساب <a href="https://chat.whatsapp.com/KrhfCLfZXkfKLQX3pOXmz4" className="text-[#001430] font-bold">(رابط المجتمع)</a> لتكوين الفريق الخاص بك، أيضا يمكنك التقديم في النموذج بشكل فردي دون فريق باختيار عضو مشارك فردي    
+          </p>
+          <p>
+          <strong  className="text-base">٧-</strong> هذا النموذج للتسجيل بمسابقة BIG O's فقط، ولا يشمل التسجيل للمعسكر التدريبي حيث يتواجد له نموذج آخر 
+          </p>
+          <p>
+          <strong className="text-base">٨-</strong> نؤكد على أهمية تعبئة النموذج كاملًا بمعلومات صحيحة. أي نقص أو خطأ في البيانات قد يؤدي إلى استبعاد المشارك من المسابقة.
           </p>
         </div>
 <div className="w-full"> {/* Removed the h-full class which might be limiting height */}
